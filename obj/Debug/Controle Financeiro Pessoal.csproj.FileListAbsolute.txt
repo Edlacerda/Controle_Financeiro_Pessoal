@@ -1,0 +1,16 @@
+D:\Eduardo\SI\Controle Financeiro Pessoal\bin\Debug\Controle Financeiro Pessoal.exe.config
+D:\Eduardo\SI\Controle Financeiro Pessoal\bin\Debug\Controle Financeiro Pessoal.exe
+D:\Eduardo\SI\Controle Financeiro Pessoal\bin\Debug\Controle Financeiro Pessoal.pdb
+D:\Eduardo\SI\Controle Financeiro Pessoal\obj\Debug\Controle Financeiro Pessoal.csprojAssemblyReference.cache
+D:\Eduardo\SI\Controle Financeiro Pessoal\obj\Debug\Controle_Financeiro_Pessoal.Properties.Resources.resources
+D:\Eduardo\SI\Controle Financeiro Pessoal\obj\Debug\Controle Financeiro Pessoal.csproj.GenerateResource.cache
+D:\Eduardo\SI\Controle Financeiro Pessoal\obj\Debug\Controle Financeiro Pessoal.exe
+D:\Eduardo\SI\Controle Financeiro Pessoal\obj\Debug\Controle Financeiro Pessoal.pdb
+D:\Eduardo\SI\Controle_Financeiro_Pessoal\bin\Debug\Controle Financeiro Pessoal.exe.config
+D:\Eduardo\SI\Controle_Financeiro_Pessoal\bin\Debug\Controle Financeiro Pessoal.exe
+D:\Eduardo\SI\Controle_Financeiro_Pessoal\bin\Debug\Controle Financeiro Pessoal.pdb
+D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle Financeiro Pessoal.csprojAssemblyReference.cache
+D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle_Financeiro_Pessoal.Properties.Resources.resources
+D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle Financeiro Pessoal.csproj.GenerateResource.cache
+D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle Financeiro Pessoal.exe
+D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle Financeiro Pessoal.pdb

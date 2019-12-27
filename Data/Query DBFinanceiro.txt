@@ -1,0 +1,93 @@
+use DBFinanceiro
+
+
+CREATE TABLE Categoria(
+IdCategoria INT NOT NULL IDENTITY(1,1), Categoria CHAR (20) NOT NULL,
+CONSTRAINT PK_Categoria PRIMARY KEY (IdCategoria)
+)
+
+
+CREATE TABLE Classe(
+IdClasse INT NOT NULL IDENTITY(1,1),  Id_Categoria INT NOT NULL, Classe CHAR (20) NOT NULL,
+CONSTRAINT PK_Classe PRIMARY KEY (IdClasse),
+CONSTRAINT FK_Id_Categoria FOREIGN KEY (Id_Categoria) REFERENCES Categoria (IdCategoria)
+)
+
+CREATE TABLE Movimentacoes(
+IDMovimento INT NOT NULL IDENTITY(1,1), Id_Categoria INT NOT NULL ,Id_Classe INT NOT NULL, Valor numeric(18,2) NOT NULL, Data datetime NOT NULL, Fornecedor VARCHAR (50) NOT NULL, Descricao varchar (MAX) NOT NULL,
+CONSTRAINT PK_IDMovimento PRIMARY KEY (IDMovimento),
+CONSTRAINT FK_Id_Categoria_ FOREIGN KEY (Id_Categoria) REFERENCES Categoria (IdCategoria),
+CONSTRAINT FK_Id_Classe FOREIGN KEY (Id_Classe) REFERENCES Classe (IdClasse)
+)
+
+INSERT INTO Categoria
+(Categoria)
+VALUES ('ENTRADAS')
+
+INSERT INTO Categoria
+(Categoria)
+VALUES ('SAIDAS')
+
+INSERT INTO Classe
+(Id_Categoria, Classe)
+VALUES (1, 'Investimento')
+
+INSERT INTO Classe
+(Id_Categoria, Classe)
+VALUES (1, 'Remuneração')
+
+INSERT INTO Classe
+(Id_Categoria, Classe)
+VALUES (1, 'Rendimento')
+
+INSERT INTO Classe
+(Id_Categoria, Classe)
+VALUES (1, 'Outro')
+
+INSERT INTO Classe
+(Id_Categoria, Classe)
+VALUES (2, 'Alimentação')
+
+INSERT INTO Classe
+(Id_Categoria, Classe)
+VALUES (2, 'Aquisição')
+
+INSERT INTO Classe
+(Id_Categoria, Classe)
+VALUES (2, 'Comodidade')
+
+INSERT INTO Classe
+(Id_Categoria, Classe)
+VALUES (2, 'Doação')
+
+INSERT INTO Classe
+(Id_Categoria, Classe)
+VALUES (2, 'Educação')
+
+INSERT INTO Classe
+(Id_Categoria, Classe)
+VALUES (2, 'Habitação')
+
+INSERT INTO Classe
+(Id_Categoria, Classe)
+VALUES (2, 'Investimento')
+
+INSERT INTO Classe
+(Id_Categoria, Classe)
+VALUES (2, 'Lazer')
+
+INSERT INTO Classe
+(Id_Categoria, Classe)
+VALUES (2, 'Presente')
+
+INSERT INTO Classe
+(Id_Categoria, Classe)
+VALUES (2, 'Taxa')
+
+INSERT INTO Classe
+(Id_Categoria, Classe)
+VALUES (2, 'Transporte')
+
+INSERT INTO Classe
+(Id_Categoria, Classe)
+VALUES (2, 'Outro')
