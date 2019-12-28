@@ -1,6 +1,6 @@
-﻿namespace Controle_Financeiro_Pessoal
+﻿namespace Controle_Financeiro_Pessoal.View
 {
-    partial class Form1
+    partial class frmNovaClassificacao
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // frmNovaClassificacao
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Name = "frmNovaClassificacao";
+            this.Text = "NOVA CLASSIFICAÇÃO";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmNovaClassificacao_FormClosed);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-

@@ -2,7 +2,7 @@
 
 namespace Controle_Financeiro_Pessoal.Model
 {
-    class Movimentacoes
+    class Movimentos
     {
         public int Id_Movimento { get; set; }
         public int Id_Categoria { get; set; }
@@ -12,7 +12,7 @@ namespace Controle_Financeiro_Pessoal.Model
         public string Fornecedor { get; set; }
         public string Descricao { get; set; }
 
-        public Movimentacoes (int idMovimento, int idCategoria, int idClasse, decimal valor, DateTime data, string fornecedor, string descricao)
+        public Movimentos (int idMovimento, int idCategoria, int idClasse, decimal valor, DateTime data, string fornecedor, string descricao)
         {
             Id_Movimento = idMovimento;
             Id_Categoria = idCategoria;
@@ -23,6 +23,9 @@ namespace Controle_Financeiro_Pessoal.Model
             Descricao = descricao;
         }
 
+        public Movimentos()
+        {
 
+        }
     }
 }

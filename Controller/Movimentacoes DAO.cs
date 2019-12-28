@@ -67,16 +67,16 @@ namespace Controle_Financeiro_Pessoal.Controller
         }
 
         // método para ler todo banco de dados e retornar as informações em uma lista
-        public List<Movimentacoes> GravarMovimentacao()
+        public List<Movimentos> LerMovimentacoes()
         {
-            List<Movimentacoes> lista = new List<Movimentacoes>();
+            List<Movimentos> lista = new List<Movimentos>();
 
             DBMovimentacoes.sqlConn.Open();
             DBMovimentacoes.cmd = new SqlCommand("select * from Movimentacoes", DBMovimentacoes.sqlConn);
             SqlDataReader dr = DBMovimentacoes.cmd.ExecuteReader();
             while (dr.Read())
             {
-                lista.Add(new Movimentacoes(Convert.ToInt32(dr[0]), Convert.ToInt32(dr[1]), Convert.ToInt32(dr[2]), Convert.ToDecimal(dr[3]), Convert.ToDateTime(dr[4]), Convert.ToString(dr[5]), Convert.ToString(dr[6])));
+                lista.Add(new Movimentos(Convert.ToInt32(dr[0]), Convert.ToInt32(dr[1]), Convert.ToInt32(dr[2]), Convert.ToDecimal(dr[3]), Convert.ToDateTime(dr[4]), Convert.ToString(dr[5]), Convert.ToString(dr[6])));
             }
             DBMovimentacoes.sqlConn.Close();
             Console.ReadKey();

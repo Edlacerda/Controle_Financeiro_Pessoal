@@ -16,7 +16,7 @@ namespace Controle_Financeiro_Pessoal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frmControleFinanceiro());
         }
     }
 }

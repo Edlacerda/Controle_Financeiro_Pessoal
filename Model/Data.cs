@@ -1,15 +1,12 @@
-﻿using System;
-using System.Data.SqlClient;
-using System.Data;
-using System.Collections.Generic;
+﻿using System.Data.SqlClient;
 
 namespace Controle_Financeiro_Pessoal.Model
 {
     class Data
     {
-        static string connectionString;
-        public SqlConnection sqlConn;
-        public SqlCommand cmd;
+        private string connectionString { get; set; }
+        public SqlConnection sqlConn { get; set; }
+        public SqlCommand cmd { get; set; }
 
         //construtor de definição dos parâmetros de conexão
         public Data()

@@ -13,7 +13,7 @@ Classe - Investimentos, Remuneração, Rendimentos e Outros (Entrada)
          Alimentação, Aquisições, Banco, Comodidades, Doações, Educação, Habitação, Investimentos, Lazer, Presentes, Transporte e  Outros (Saída)
 
 O programa permitirá que o usuário:
-Inclua/Exclua Categorias e Classificações financeiras;
+Inclua/Exclua Classificações financeiras;
 Inclua/Exclua/Edite movimentações financeiras;
 Visualize um fluxo de caixa conforme classificações;
 Visualize, em uma curva ABC (maior para menor), os maiores valores de entrada e saída.
