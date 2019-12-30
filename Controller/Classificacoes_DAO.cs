@@ -9,7 +9,8 @@ namespace Controle_Financeiro_Pessoal.Controller
     class Classificacoes_DAO
     {
         public Data DBClassificacoes { get; set; }
-        
+                public Classes classificacao { get; set; }
+
         public Classificacoes_DAO()
         {
             DBClassificacoes = new Data();
@@ -46,9 +47,6 @@ namespace Controle_Financeiro_Pessoal.Controller
         // Método de alteração, necessário informar todos os parâmetros, considerando que não se sabe qual será alterado
         public bool AlterarClasse(int id_Classe, int id_Categoria, string classe)
         {
-            //colocar verificação de se existir movimentações dentro da classe
-
-
             DBClassificacoes.cmd = new SqlCommand("use DB_Financeiro UPDATE Classe SET Id_Categoria = " + id_Categoria + ", IdClasse = " + id_Classe + ", Classe = '" + classe + "' WHERE IdClasse = " + id_Classe, DBClassificacoes.sqlConn);
             if (conexão(DBClassificacoes.cmd))
                 return true;
@@ -58,8 +56,6 @@ namespace Controle_Financeiro_Pessoal.Controller
         // Método para excluir a movimentação financeira
         public bool DeletarClasse(int Id_Classe)
         {
-            //colocar verificação de se existir movimentações dentro da classe
-
             DBClassificacoes.cmd = new SqlCommand("use DB_Financeiro DELETE FROM Classe WHERE IdClasse = " + Id_Classe, DBClassificacoes.sqlConn);
             if (conexão(DBClassificacoes.cmd))
                 return true;
