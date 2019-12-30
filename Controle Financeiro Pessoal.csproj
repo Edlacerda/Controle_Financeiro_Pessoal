@@ -48,9 +48,12 @@
   <ItemGroup>
     <Compile Include="Controller\Classificacoes.cs" />
     <Compile Include="Controller\Classificacoes_DAO.cs" />
-    <Compile Include="Controller\Movimentacoes DAO.cs" />
+    <Compile Include="Controller\Movimentacoes_DAO.cs" />
     <Compile Include="Controller\Movimentacoes.cs" />
+    <Compile Include="Controller\NConta.cs" />
+    <Compile Include="Controller\NConta_DAO.cs" />
     <Compile Include="Model\Classes.cs" />
+    <Compile Include="Model\Contas.cs" />
     <Compile Include="Model\Data.cs" />
     <Compile Include="Model\Movimentos.cs" />
     <Compile Include="View\frmNovaClassificacao.cs">

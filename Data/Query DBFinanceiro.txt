@@ -13,11 +13,17 @@ CONSTRAINT PK_Classe PRIMARY KEY (IdClasse),
 CONSTRAINT FK_Id_Categoria FOREIGN KEY (Id_Categoria) REFERENCES Categoria (IdCategoria)
 )
 
+CREATE TABLE Conta(
+IdConta INT NOT NULL IDENTITY(1,1), Conta CHAR (20) NOT NULL,
+CONSTRAINT PK_Conta PRIMARY KEY (IdConta),
+)
+
 CREATE TABLE Movimentacoes(
-IDMovimento INT NOT NULL IDENTITY(1,1), Id_Categoria INT NOT NULL ,Id_Classe INT NOT NULL, Valor numeric(18,2) NOT NULL, Data datetime NOT NULL, Fornecedor VARCHAR (50) NOT NULL, Descricao varchar (MAX) NOT NULL,
+IDMovimento INT NOT NULL IDENTITY(1,1), Id_Categoria INT NOT NULL, Id_Classe INT NOT NULL, Id_Conta INT NOT NULL, Valor numeric(18,2) NOT NULL, Data datetime NOT NULL, Fornecedor VARCHAR (50) NOT NULL, Descricao varchar (MAX) NOT NULL,
 CONSTRAINT PK_IDMovimento PRIMARY KEY (IDMovimento),
 CONSTRAINT FK_Id_Categoria_ FOREIGN KEY (Id_Categoria) REFERENCES Categoria (IdCategoria),
-CONSTRAINT FK_Id_Classe FOREIGN KEY (Id_Classe) REFERENCES Classe (IdClasse)
+CONSTRAINT FK_Id_Classe FOREIGN KEY (Id_Classe) REFERENCES Classe (IdClasse),
+CONSTRAINT FK_Id_Conta FOREIGN KEY (Id_Conta) REFERENCES Conta (IdConta)
 )
 
 INSERT INTO Categoria

@@ -21,6 +21,5 @@ namespace Controle_Financeiro_Pessoal.Controller
             ListaMovimentacoes = AcessoDB.LerMovimentacoes();
         }
 
-        
     }
 }
