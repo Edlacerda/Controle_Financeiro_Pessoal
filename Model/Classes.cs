@@ -18,12 +18,5 @@ namespace Controle_Financeiro_Pessoal.Model
             IdClasse = idClasse;
             Classe = classe;
         }
-
-        public Classes()
-        {
-
-        }
-
-
     }
 }

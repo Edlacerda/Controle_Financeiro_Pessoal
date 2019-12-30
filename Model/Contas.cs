@@ -16,10 +16,5 @@ namespace Controle_Financeiro_Pessoal.Model
             Id_Conta = idConta;
             Conta = conta;
         }
-
-        public Contas()
-        {
-
-        }
     }
 }

@@ -31,11 +31,10 @@ namespace Controle_Financeiro_Pessoal.Controller
         }
 
         // método booleano para informar ao usuário se obteve sucesso ao salvar as informações no banco de dado
-        public bool GravarConta(int id_Conta, string conta)
+        public bool GravarConta(string conta)
         {
             // definindo sql de insersão e atribuindo os parâmetros
-            DBContas.cmd = new SqlCommand("insert into Conta(Id_Conta, Conta) values (@idConta, @conta)", DBContas.sqlConn);
-            DBContas.cmd.Parameters.Add("@idConta", SqlDbType.Int).Value = id_Conta;
+            DBContas.cmd = new SqlCommand("insert into Conta(Conta) values (@conta)", DBContas.sqlConn);
             DBContas.cmd.Parameters.Add("@conta", SqlDbType.VarChar).Value = conta;
 
             if (conexão(DBContas.cmd))

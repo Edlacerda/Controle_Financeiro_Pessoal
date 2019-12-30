@@ -24,10 +24,5 @@ namespace Controle_Financeiro_Pessoal.Model
             Fornecedor = fornecedor;
             Descricao = descricao;
         }
-
-        public Movimentos()
-        {
-
-        }
     }
 }
