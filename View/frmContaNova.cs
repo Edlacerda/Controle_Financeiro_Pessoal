@@ -3,11 +3,11 @@ using System.Windows.Forms;
 
 namespace Controle_Financeiro_Pessoal.View
 {
-    public partial class frmNovaConta : Form
+    public partial class frmContaNova : Form
     {
         frmControleFinanceiro formInicial;
 
-        public frmNovaConta(frmControleFinanceiro F)
+        public frmContaNova(frmControleFinanceiro F)
         {
             InitializeComponent();
             formInicial = F;

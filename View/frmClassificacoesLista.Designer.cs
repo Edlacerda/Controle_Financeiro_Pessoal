@@ -1,6 +1,6 @@
 ﻿namespace Controle_Financeiro_Pessoal.View
 {
-    partial class frmListaClassificacoes
+    partial class frmClassificacoesLista
     {
         /// <summary>
         /// Required designer variable.

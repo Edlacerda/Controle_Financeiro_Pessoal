@@ -58,23 +58,23 @@
     <Compile Include="Model\Contas.cs" />
     <Compile Include="Model\Data.cs" />
     <Compile Include="Model\Movimentos.cs" />
-    <Compile Include="View\frmListaClassificacoes.cs">
+    <Compile Include="View\frmClassificacoesLista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmListaClassificacoes.Designer.cs">
-      <DependentUpon>frmListaClassificacoes.cs</DependentUpon>
+    <Compile Include="View\frmClassificacoesLista.Designer.cs">
+      <DependentUpon>frmClassificacoesLista.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmNovaClassificacao.cs">
+    <Compile Include="View\frmClassificacaoNova.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmNovaClassificacao.Designer.cs">
-      <DependentUpon>frmNovaClassificacao.cs</DependentUpon>
+    <Compile Include="View\frmClassificacaoNova.Designer.cs">
+      <DependentUpon>frmClassificacaoNova.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmNovaConta.cs">
+    <Compile Include="View\frmContaNova.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmNovaConta.Designer.cs">
-      <DependentUpon>frmNovaConta.cs</DependentUpon>
+    <Compile Include="View\frmContaNova.Designer.cs">
+      <DependentUpon>frmContaNova.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmControleFinanceiro.cs">
       <SubType>Form</SubType>
@@ -90,11 +90,11 @@
     <Compile Include="View\frmFluxoDeCaixa.Designer.cs">
       <DependentUpon>frmFluxoDeCaixa.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmNovaMovimentacao.cs">
+    <Compile Include="View\frmMovimentacaoNova.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmNovaMovimentacao.Designer.cs">
-      <DependentUpon>frmNovaMovimentacao.cs</DependentUpon>
+    <Compile Include="View\frmMovimentacaoNova.Designer.cs">
+      <DependentUpon>frmMovimentacaoNova.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -105,14 +105,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\frmListaClassificacoes.resx">
-      <DependentUpon>frmListaClassificacoes.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmClassificacoesLista.resx">
+      <DependentUpon>frmClassificacoesLista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmNovaClassificacao.resx">
-      <DependentUpon>frmNovaClassificacao.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmClassificacaoNova.resx">
+      <DependentUpon>frmClassificacaoNova.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmNovaConta.resx">
-      <DependentUpon>frmNovaConta.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmContaNova.resx">
+      <DependentUpon>frmContaNova.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmControleFinanceiro.resx">
       <DependentUpon>frmControleFinanceiro.cs</DependentUpon>
@@ -120,8 +120,8 @@
     <EmbeddedResource Include="View\frmFluxoDeCaixa.resx">
       <DependentUpon>frmFluxoDeCaixa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmNovaMovimentacao.resx">
-      <DependentUpon>frmNovaMovimentacao.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmMovimentacaoNova.resx">
+      <DependentUpon>frmMovimentacaoNova.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

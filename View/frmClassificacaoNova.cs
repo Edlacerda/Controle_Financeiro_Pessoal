@@ -4,12 +4,12 @@ using Controle_Financeiro_Pessoal.Controller;
 
 namespace Controle_Financeiro_Pessoal.View
 {
-    public partial class frmNovaClassificacao : Form
+    public partial class frmClassificacaoNova : Form
     {
         Classificacoes classe;
         Categoria categoria;
 
-        public frmNovaClassificacao()
+        public frmClassificacaoNova()
         {
             InitializeComponent();
             // iniciado as classes e categoria para preenchimento do nome da categoria e comparativo se existe outra igual
@@ -60,7 +60,8 @@ namespace Controle_Financeiro_Pessoal.View
         {
             this.Close();
         }
-
+        
+        // preecher nome da categoria no textbox caso mudaça de valor do combobox
         private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtNomeCategoria.Enabled = true;

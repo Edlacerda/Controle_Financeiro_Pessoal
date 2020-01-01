@@ -1,6 +1,6 @@
 ﻿namespace Controle_Financeiro_Pessoal.View
 {
-    partial class frmNovaMovimentacao
+    partial class frmMovimentacaoNova
     {
         /// <summary>
         /// Required designer variable.

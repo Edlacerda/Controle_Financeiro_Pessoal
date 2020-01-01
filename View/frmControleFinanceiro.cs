@@ -11,33 +11,36 @@ namespace Controle_Financeiro_Pessoal
             InitializeComponent();
         }
 
-        private void TSMFluxoDeCaixaAnual_Click(object sender, EventArgs e)
+        private void tsmiMovimentacoes_Click(object sender, EventArgs e)
+        {
+            frmMovimentacaoNova x = new frmMovimentacaoNova(this);
+            x.Show();
+            this.Hide();
+        }
+
+        private void tmsiContas_Click(object sender, EventArgs e)
+        {
+            frmContaNova x = new frmContaNova(this);
+            x.Show();
+            this.Hide();
+        }
+
+        private void tsmiClasses_Click(object sender, EventArgs e)
+        {
+            frmClassificacoesLista x = new frmClassificacoesLista(this);
+            x.Show();
+            this.Hide();
+        }
+        private void tsmiFluxoDeCaixa_Click(object sender, EventArgs e)
         {
             frmFluxoDeCaixa x = new frmFluxoDeCaixa(this);
             x.Show();
             this.Hide();
         }
 
-        private void TSMNovaConta_Click(object sender, EventArgs e)
+        private void tsmiInformacoes_Click(object sender, EventArgs e)
         {
-            frmNovaConta x = new frmNovaConta(this);
-            x.Show();
-            this.Hide();
-
-        }
-
-        private void TSMNovaMovimentacao_Click(object sender, EventArgs e)
-        {
-            frmNovaMovimentacao x = new frmNovaMovimentacao(this);
-            x.Show();
-            this.Hide();
-        }
-
-        private void tsmiListaClasses_Click(object sender, EventArgs e)
-        {
-            frmListaClassificacoes x = new frmListaClassificacoes(this);
-            x.Show();
-            this.Hide();
+            MessageBox.Show("Desenvolvido por Eduardo Lacerda Ribeiro!", "INFORMAÇÕES");
         }
     }
 }

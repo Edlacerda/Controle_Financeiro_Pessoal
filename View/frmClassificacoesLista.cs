@@ -4,13 +4,13 @@ using Controle_Financeiro_Pessoal.Controller;
 
 namespace Controle_Financeiro_Pessoal.View
 {
-    public partial class frmListaClassificacoes : Form
+    public partial class frmClassificacoesLista : Form
     {
         frmControleFinanceiro formInicial;
         Classificacoes classe;
         Categoria categoria;
         
-        public frmListaClassificacoes(frmControleFinanceiro F)
+        public frmClassificacoesLista(frmControleFinanceiro F)
         {
             InitializeComponent();
             // iniciado o Form que chamou para voltar nele quando fechar
@@ -37,7 +37,7 @@ namespace Controle_Financeiro_Pessoal.View
         // botão Nova Classe abre o forme para criar classe, sem fechar a lista de forms
         private void btnNovaClasse_Click(object sender, EventArgs e)
         {
-            frmNovaClassificacao x = new frmNovaClassificacao();
+            frmClassificacaoNova x = new frmClassificacaoNova();
             x.Show();
         }
 

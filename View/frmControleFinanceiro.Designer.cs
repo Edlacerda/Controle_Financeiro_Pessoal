@@ -29,145 +29,80 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fluxoDeCaixaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.TSMFluxoDeCaixaAnual = new System.Windows.Forms.ToolStripMenuItem();
-            this.contasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.novaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.edToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deletarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.saldoPorContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.classiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.deletarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.movimentaçõesPorPeríodoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.movimentaçõesPorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiListaClasses = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiIniciar = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiClasses = new System.Windows.Forms.ToolStripMenuItem();
+            this.tmsiContas = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiMovimentacoes = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiRelatorios = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiFluxoDeCaixa = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiInformacoes = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fluxoDeCaixaToolStripMenuItem,
-            this.contasToolStripMenuItem,
-            this.editarToolStripMenuItem1,
-            this.editarToolStripMenuItem});
+            this.tsmiIniciar,
+            this.tsmiRelatorios,
+            this.tsmiInformacoes});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(616, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // fluxoDeCaixaToolStripMenuItem
+            // tsmiIniciar
             // 
-            this.fluxoDeCaixaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TSMFluxoDeCaixaAnual});
-            this.fluxoDeCaixaToolStripMenuItem.Name = "fluxoDeCaixaToolStripMenuItem";
-            this.fluxoDeCaixaToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
-            this.fluxoDeCaixaToolStripMenuItem.Text = "Fluxo de Caixa";
+            this.tsmiIniciar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiClasses,
+            this.tmsiContas,
+            this.tsmiMovimentacoes});
+            this.tsmiIniciar.Name = "tsmiIniciar";
+            this.tsmiIniciar.Size = new System.Drawing.Size(51, 20);
+            this.tsmiIniciar.Text = "Iniciar";
             // 
-            // TSMFluxoDeCaixaAnual
+            // tsmiClasses
             // 
-            this.TSMFluxoDeCaixaAnual.Name = "TSMFluxoDeCaixaAnual";
-            this.TSMFluxoDeCaixaAnual.Size = new System.Drawing.Size(155, 22);
-            this.TSMFluxoDeCaixaAnual.Text = "Visualizar anual";
-            this.TSMFluxoDeCaixaAnual.Click += new System.EventHandler(this.TSMFluxoDeCaixaAnual_Click);
+            this.tsmiClasses.Name = "tsmiClasses";
+            this.tsmiClasses.Size = new System.Drawing.Size(180, 22);
+            this.tsmiClasses.Text = "Classes";
+            this.tsmiClasses.Click += new System.EventHandler(this.tsmiClasses_Click);
             // 
-            // contasToolStripMenuItem
+            // tmsiContas
             // 
-            this.contasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.novaToolStripMenuItem1,
-            this.edToolStripMenuItem,
-            this.deletarToolStripMenuItem2,
-            this.saldoPorContaToolStripMenuItem});
-            this.contasToolStripMenuItem.Name = "contasToolStripMenuItem";
-            this.contasToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.contasToolStripMenuItem.Text = "Contas";
+            this.tmsiContas.Name = "tmsiContas";
+            this.tmsiContas.Size = new System.Drawing.Size(180, 22);
+            this.tmsiContas.Text = "Contas";
+            this.tmsiContas.Click += new System.EventHandler(this.tmsiContas_Click);
             // 
-            // novaToolStripMenuItem1
+            // tsmiMovimentacoes
             // 
-            this.novaToolStripMenuItem1.Name = "novaToolStripMenuItem1";
-            this.novaToolStripMenuItem1.Size = new System.Drawing.Size(157, 22);
-            this.novaToolStripMenuItem1.Text = "Nova";
-            this.novaToolStripMenuItem1.Click += new System.EventHandler(this.TSMNovaConta_Click);
+            this.tsmiMovimentacoes.Name = "tsmiMovimentacoes";
+            this.tsmiMovimentacoes.Size = new System.Drawing.Size(180, 22);
+            this.tsmiMovimentacoes.Text = "Movimentações";
+            this.tsmiMovimentacoes.Click += new System.EventHandler(this.tsmiMovimentacoes_Click);
             // 
-            // edToolStripMenuItem
+            // tsmiRelatorios
             // 
-            this.edToolStripMenuItem.Name = "edToolStripMenuItem";
-            this.edToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.edToolStripMenuItem.Text = "Editar";
+            this.tsmiRelatorios.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiFluxoDeCaixa});
+            this.tsmiRelatorios.Name = "tsmiRelatorios";
+            this.tsmiRelatorios.Size = new System.Drawing.Size(71, 20);
+            this.tsmiRelatorios.Text = "Relatórios";
             // 
-            // deletarToolStripMenuItem2
+            // tsmiFluxoDeCaixa
             // 
-            this.deletarToolStripMenuItem2.Name = "deletarToolStripMenuItem2";
-            this.deletarToolStripMenuItem2.Size = new System.Drawing.Size(157, 22);
-            this.deletarToolStripMenuItem2.Text = "Deletar";
+            this.tsmiFluxoDeCaixa.Name = "tsmiFluxoDeCaixa";
+            this.tsmiFluxoDeCaixa.Size = new System.Drawing.Size(151, 22);
+            this.tsmiFluxoDeCaixa.Text = "Fluxo de Caixa";
+            this.tsmiFluxoDeCaixa.Click += new System.EventHandler(this.tsmiFluxoDeCaixa_Click);
             // 
-            // saldoPorContaToolStripMenuItem
+            // tsmiInformacoes
             // 
-            this.saldoPorContaToolStripMenuItem.Name = "saldoPorContaToolStripMenuItem";
-            this.saldoPorContaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.saldoPorContaToolStripMenuItem.Text = "Saldo por conta";
-            // 
-            // editarToolStripMenuItem1
-            // 
-            this.editarToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.classiToolStripMenuItem,
-            this.editarToolStripMenuItem3,
-            this.deletarToolStripMenuItem1,
-            this.movimentaçõesPorPeríodoToolStripMenuItem,
-            this.movimentaçõesPorToolStripMenuItem});
-            this.editarToolStripMenuItem1.Name = "editarToolStripMenuItem1";
-            this.editarToolStripMenuItem1.Size = new System.Drawing.Size(99, 20);
-            this.editarToolStripMenuItem1.Text = "Movimentação";
-            // 
-            // classiToolStripMenuItem
-            // 
-            this.classiToolStripMenuItem.Name = "classiToolStripMenuItem";
-            this.classiToolStripMenuItem.Size = new System.Drawing.Size(304, 22);
-            this.classiToolStripMenuItem.Text = "Nova";
-            this.classiToolStripMenuItem.Click += new System.EventHandler(this.TSMNovaMovimentacao_Click);
-            // 
-            // editarToolStripMenuItem3
-            // 
-            this.editarToolStripMenuItem3.Name = "editarToolStripMenuItem3";
-            this.editarToolStripMenuItem3.Size = new System.Drawing.Size(304, 22);
-            this.editarToolStripMenuItem3.Text = "Editar";
-            // 
-            // deletarToolStripMenuItem1
-            // 
-            this.deletarToolStripMenuItem1.Name = "deletarToolStripMenuItem1";
-            this.deletarToolStripMenuItem1.Size = new System.Drawing.Size(304, 22);
-            this.deletarToolStripMenuItem1.Text = "Deletar";
-            // 
-            // movimentaçõesPorPeríodoToolStripMenuItem
-            // 
-            this.movimentaçõesPorPeríodoToolStripMenuItem.Name = "movimentaçõesPorPeríodoToolStripMenuItem";
-            this.movimentaçõesPorPeríodoToolStripMenuItem.Size = new System.Drawing.Size(304, 22);
-            this.movimentaçõesPorPeríodoToolStripMenuItem.Text = "Movimentações por período";
-            // 
-            // movimentaçõesPorToolStripMenuItem
-            // 
-            this.movimentaçõesPorToolStripMenuItem.Name = "movimentaçõesPorToolStripMenuItem";
-            this.movimentaçõesPorToolStripMenuItem.Size = new System.Drawing.Size(304, 22);
-            this.movimentaçõesPorToolStripMenuItem.Text = "Movimentações por classificação financeira";
-            // 
-            // editarToolStripMenuItem
-            // 
-            this.editarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiListaClasses});
-            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(144, 20);
-            this.editarToolStripMenuItem.Text = "Classificação Financeira";
-            // 
-            // tsmiListaClasses
-            // 
-            this.tsmiListaClasses.Name = "tsmiListaClasses";
-            this.tsmiListaClasses.Size = new System.Drawing.Size(180, 22);
-            this.tsmiListaClasses.Text = "Lista";
-            this.tsmiListaClasses.Click += new System.EventHandler(this.tsmiListaClasses_Click);
+            this.tsmiInformacoes.Name = "tsmiInformacoes";
+            this.tsmiInformacoes.Size = new System.Drawing.Size(85, 20);
+            this.tsmiInformacoes.Text = "Informações";
+            this.tsmiInformacoes.Click += new System.EventHandler(this.tsmiInformacoes_Click);
             // 
             // frmControleFinanceiro
             // 
@@ -188,21 +123,13 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem classiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem deletarToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem fluxoDeCaixaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem TSMFluxoDeCaixaAnual;
-        private System.Windows.Forms.ToolStripMenuItem contasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem novaToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem edToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deletarToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem saldoPorContaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem movimentaçõesPorPeríodoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem movimentaçõesPorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tsmiListaClasses;
+        private System.Windows.Forms.ToolStripMenuItem tsmiIniciar;
+        private System.Windows.Forms.ToolStripMenuItem tsmiRelatorios;
+        private System.Windows.Forms.ToolStripMenuItem tsmiFluxoDeCaixa;
+        private System.Windows.Forms.ToolStripMenuItem tsmiClasses;
+        private System.Windows.Forms.ToolStripMenuItem tmsiContas;
+        private System.Windows.Forms.ToolStripMenuItem tsmiMovimentacoes;
+        private System.Windows.Forms.ToolStripMenuItem tsmiInformacoes;
     }
 }
 
