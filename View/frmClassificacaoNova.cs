@@ -6,13 +6,15 @@ namespace Controle_Financeiro_Pessoal.View
 {
     public partial class frmClassificacaoNova : Form
     {
+        frmClassificacoesLista frmlistaclasses;
         Classificacoes classe;
         Categoria categoria;
 
-        public frmClassificacaoNova()
+        public frmClassificacaoNova(frmClassificacoesLista F)
         {
             InitializeComponent();
             // iniciado as classes e categoria para preenchimento do nome da categoria e comparativo se existe outra igual
+            frmlistaclasses = F;
             classe = new Classificacoes();
             categoria = new Categoria();
             PreencherCmbCategoria();
@@ -48,9 +50,13 @@ namespace Controle_Financeiro_Pessoal.View
             }
             // so grava nova classe se o valor de cont for 0 (textos estando preenchidos e diferentes dos da lista
             if (cont == 0)
-                classe.InserirClasse(Convert.ToInt32(cmbCategoria.Text), txtNomeClasse.Text);
-            else
-                MessageBox.Show("Não foi possível salvar a Classe.\n\nVerifique se todos os campos estão preenchidos \nou se a Classe já existe na categoria");
+                if (classe.InserirClasse(Convert.ToInt32(cmbCategoria.Text), txtNomeClasse.Text))
+                {
+                    frmlistaclasses.AtualizarLvwClasses();
+                    MessageBox.Show("Classe inserida com sucesso!");
+                }
+                else
+                    MessageBox.Show("Não foi possível salvar a Classe.\n\nVerifique se todos os campos estão preenchidos \nou se a Classe já existe na categoria");
             // toda vez que clicar em salvar, fecha o form
             this.Close();
         }
@@ -60,7 +66,7 @@ namespace Controle_Financeiro_Pessoal.View
         {
             this.Close();
         }
-        
+
         // preecher nome da categoria no textbox caso mudaça de valor do combobox
         private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {

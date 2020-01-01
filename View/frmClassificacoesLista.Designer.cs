@@ -34,8 +34,8 @@
             this.column_Categoria = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.column_Classe = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnNovaClasse = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lvwClasses
@@ -83,34 +83,36 @@
             this.btnNovaClasse.UseVisualStyleBackColor = true;
             this.btnNovaClasse.Click += new System.EventHandler(this.btnNovaClasse_Click);
             // 
-            // button1
+            // btnEditar
             // 
-            this.button1.Location = new System.Drawing.Point(191, 319);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 22);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "EDITAR";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnEditar.Location = new System.Drawing.Point(191, 319);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(151, 22);
+            this.btnEditar.TabIndex = 1;
+            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // button2
+            // btnExcluir
             // 
-            this.button2.Location = new System.Drawing.Point(360, 319);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(151, 22);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "EXCLUIR";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnExcluir.Location = new System.Drawing.Point(360, 319);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(151, 22);
+            this.btnExcluir.TabIndex = 1;
+            this.btnExcluir.Text = "EXCLUIR";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // frmListaClassificacoes
+            // frmClassificacoesLista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 345);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNovaClasse);
             this.Controls.Add(this.lvwClasses);
-            this.Name = "frmListaClassificacoes";
+            this.Name = "frmClassificacoesLista";
             this.Text = "LISTA DE CLASSIFICAÇÕES";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmListaClassificacoes_FormClosed);
             this.ResumeLayout(false);
@@ -125,7 +127,7 @@
         private System.Windows.Forms.ColumnHeader column_Categoria;
         private System.Windows.Forms.ColumnHeader column_Classe;
         private System.Windows.Forms.Button btnNovaClasse;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }

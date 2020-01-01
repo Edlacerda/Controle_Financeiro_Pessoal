@@ -35,7 +35,7 @@ namespace Controle_Financeiro_Pessoal.Controller
         public bool GravarClasse(int id_Categoria,  string classe)
         {
             // definindo sql de insersão e atribuindo os parâmetros
-            DBClassificacoes.cmd = new SqlCommand("insert into Classe(Id_Categoria, Classe) values (@idCategoria, @classe)", DBClassificacoes.sqlConn);
+            DBClassificacoes.cmd = new SqlCommand("INSERT INTO Classe(Id_Categoria, Classe) VALUES (@idCategoria, @classe)", DBClassificacoes.sqlConn);
             DBClassificacoes.cmd.Parameters.Add("@idCategoria", SqlDbType.Int).Value = id_Categoria;
             DBClassificacoes.cmd.Parameters.Add("@classe", SqlDbType.VarChar).Value = classe;
 
@@ -47,7 +47,8 @@ namespace Controle_Financeiro_Pessoal.Controller
         // Método de alteração, necessário informar todos os parâmetros, considerando que não se sabe qual será alterado
         public bool AlterarClasse(int id_Classe, int id_Categoria, string classe)
         {
-            DBClassificacoes.cmd = new SqlCommand("use DB_Financeiro UPDATE Classe SET Id_Categoria = " + id_Categoria + ", IdClasse = " + id_Classe + ", Classe = '" + classe + "' WHERE IdClasse = " + id_Classe, DBClassificacoes.sqlConn);
+            DBClassificacoes.cmd = new SqlCommand("UPDATE Classe SET Id_Categoria = " + id_Categoria + ", Classe = '" + classe + "' WHERE IdClasse = " + id_Classe, DBClassificacoes.sqlConn);
+
             if (conexão(DBClassificacoes.cmd))
                 return true;
             return false;
@@ -56,7 +57,7 @@ namespace Controle_Financeiro_Pessoal.Controller
         // Método para excluir a movimentação financeira
         public bool DeletarClasse(int Id_Classe)
         {
-            DBClassificacoes.cmd = new SqlCommand("use DB_Financeiro DELETE FROM Classe WHERE IdClasse = " + Id_Classe, DBClassificacoes.sqlConn);
+            DBClassificacoes.cmd = new SqlCommand("DELETE FROM Classe WHERE IdClasse = " + Id_Classe, DBClassificacoes.sqlConn);
             if (conexão(DBClassificacoes.cmd))
                 return true;
             return false;
@@ -68,7 +69,7 @@ namespace Controle_Financeiro_Pessoal.Controller
             List<Classes> lista = new List<Classes>();
 
             DBClassificacoes.sqlConn.Open();
-            DBClassificacoes.cmd = new SqlCommand("use DBFinanceiro select * from Classe", DBClassificacoes.sqlConn);
+            DBClassificacoes.cmd = new SqlCommand("SELECT * FROM Classe", DBClassificacoes.sqlConn);
             SqlDataReader dr = DBClassificacoes.cmd.ExecuteReader();
             while (dr.Read())
             {

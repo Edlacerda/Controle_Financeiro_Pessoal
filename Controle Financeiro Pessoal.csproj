@@ -58,6 +58,18 @@
     <Compile Include="Model\Contas.cs" />
     <Compile Include="Model\Data.cs" />
     <Compile Include="Model\Movimentos.cs" />
+    <Compile Include="View\frmClassificacaoExcluir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmClassificacaoExcluir.Designer.cs">
+      <DependentUpon>frmClassificacaoExcluir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmClassificacaoEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmClassificacaoEditar.Designer.cs">
+      <DependentUpon>frmClassificacaoEditar.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmClassificacoesLista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +117,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmClassificacaoExcluir.resx">
+      <DependentUpon>frmClassificacaoExcluir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmClassificacaoEditar.resx">
+      <DependentUpon>frmClassificacaoEditar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmClassificacoesLista.resx">
       <DependentUpon>frmClassificacoesLista.cs</DependentUpon>
     </EmbeddedResource>
