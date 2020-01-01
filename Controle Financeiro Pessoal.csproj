@@ -46,16 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\Categoria.cs" />
     <Compile Include="Controller\Classificacoes.cs" />
     <Compile Include="Controller\Classificacoes_DAO.cs" />
     <Compile Include="Controller\Movimentacoes_DAO.cs" />
     <Compile Include="Controller\Movimentacoes.cs" />
     <Compile Include="Controller\NConta.cs" />
     <Compile Include="Controller\NConta_DAO.cs" />
+    <Compile Include="Model\Categorias.cs" />
     <Compile Include="Model\Classes.cs" />
     <Compile Include="Model\Contas.cs" />
     <Compile Include="Model\Data.cs" />
     <Compile Include="Model\Movimentos.cs" />
+    <Compile Include="View\frmListaClassificacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmListaClassificacoes.Designer.cs">
+      <DependentUpon>frmListaClassificacoes.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmNovaClassificacao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +105,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmListaClassificacoes.resx">
+      <DependentUpon>frmListaClassificacoes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmNovaClassificacao.resx">
       <DependentUpon>frmNovaClassificacao.cs</DependentUpon>
     </EmbeddedResource>

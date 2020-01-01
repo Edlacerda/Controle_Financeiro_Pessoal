@@ -1,21 +1,74 @@
 ﻿using System;
 using System.Windows.Forms;
+using Controle_Financeiro_Pessoal.Controller;
 
 namespace Controle_Financeiro_Pessoal.View
 {
     public partial class frmNovaClassificacao : Form
     {
-        frmControleFinanceiro formInicial;
+        Classificacoes classe;
+        Categoria categoria;
 
-        public frmNovaClassificacao(frmControleFinanceiro F)
+        public frmNovaClassificacao()
         {
             InitializeComponent();
-            formInicial = F;
+            // iniciado as classes e categoria para preenchimento do nome da categoria e comparativo se existe outra igual
+            classe = new Classificacoes();
+            categoria = new Categoria();
+            PreencherCmbCategoria();
+            txtNomeCategoria.Enabled = false;
         }
 
-        private void frmNovaClassificacao_FormClosed(object sender, FormClosedEventArgs e)
+        //preenchendo categorias do 1 = ENTRADAS, 2 = SAÍDAS
+        private void PreencherCmbCategoria()
         {
-            formInicial.Show();
+            cmbCategoria.Items.Add(1);
+            cmbCategoria.Items.Add(2);
+        }
+
+        // método para salvar classe através do click no botão salvar
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            int cont = 1;
+            //verifica se as caixas de texto não estão vazias
+            if (cmbCategoria.Text != "" && txtNomeClasse.Text != "")
+            {
+                // não estando, seta o valor de cont a 0
+                cont -= 1;
+                // e busca na lista de classses se em alguma com a mesma categoria e nome
+                foreach (var x in classe.ListaClasses)
+                {
+                    if (x.Id_Categoria == Convert.ToInt32(cmbCategoria.Text) && x.Classe == txtNomeClasse.Text)
+                    {
+                        // se tiver volta o valor de cont a 1
+                        cont += 1;
+                        break;
+                    }
+                }
+            }
+            // so grava nova classe se o valor de cont for 0 (textos estando preenchidos e diferentes dos da lista
+            if (cont == 0)
+                classe.InserirClasse(Convert.ToInt32(cmbCategoria.Text), txtNomeClasse.Text);
+            else
+                MessageBox.Show("Não foi possível salvar a Classe.\n\nVerifique se todos os campos estão preenchidos \nou se a Classe já existe na categoria");
+            // toda vez que clicar em salvar, fecha o form
+            this.Close();
+        }
+
+        // botão cancelar fecha o form
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtNomeCategoria.Enabled = true;
+
+            txtNomeCategoria.Text = categoria.NomeCategoria(Convert.ToInt32(cmbCategoria.Text));
+
+            txtNomeCategoria.Enabled = false;
         }
     }
+
 }

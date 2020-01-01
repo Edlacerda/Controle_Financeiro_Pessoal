@@ -78,8 +78,6 @@ namespace Controle_Financeiro_Pessoal.Controller
                 lista.Add(new Contas(Convert.ToInt32(dr[0]), Convert.ToString(dr[1])));
             }
             DBContas.sqlConn.Close();
-            Console.ReadKey();
-
             return lista;
         }
     }

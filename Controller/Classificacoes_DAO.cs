@@ -68,15 +68,13 @@ namespace Controle_Financeiro_Pessoal.Controller
             List<Classes> lista = new List<Classes>();
 
             DBClassificacoes.sqlConn.Open();
-            DBClassificacoes.cmd = new SqlCommand("select * from Classes", DBClassificacoes.sqlConn);
+            DBClassificacoes.cmd = new SqlCommand("use DBFinanceiro select * from Classe", DBClassificacoes.sqlConn);
             SqlDataReader dr = DBClassificacoes.cmd.ExecuteReader();
             while (dr.Read())
             {
                 lista.Add(new Classes(Convert.ToInt32(dr[0]), Convert.ToInt32(dr[1]), Convert.ToString(dr[2])));
             }
             DBClassificacoes.sqlConn.Close();
-            Console.ReadKey();
-
             return lista;
         }
 

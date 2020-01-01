@@ -43,10 +43,7 @@
             this.movimentaçõesPorPeríodoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.movimentaçõesPorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.novaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.deletarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiListaClasses = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,26 +89,26 @@
             // novaToolStripMenuItem1
             // 
             this.novaToolStripMenuItem1.Name = "novaToolStripMenuItem1";
-            this.novaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.novaToolStripMenuItem1.Size = new System.Drawing.Size(157, 22);
             this.novaToolStripMenuItem1.Text = "Nova";
             this.novaToolStripMenuItem1.Click += new System.EventHandler(this.TSMNovaConta_Click);
             // 
             // edToolStripMenuItem
             // 
             this.edToolStripMenuItem.Name = "edToolStripMenuItem";
-            this.edToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.edToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.edToolStripMenuItem.Text = "Editar";
             // 
             // deletarToolStripMenuItem2
             // 
             this.deletarToolStripMenuItem2.Name = "deletarToolStripMenuItem2";
-            this.deletarToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.deletarToolStripMenuItem2.Size = new System.Drawing.Size(157, 22);
             this.deletarToolStripMenuItem2.Text = "Deletar";
             // 
             // saldoPorContaToolStripMenuItem
             // 
             this.saldoPorContaToolStripMenuItem.Name = "saldoPorContaToolStripMenuItem";
-            this.saldoPorContaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saldoPorContaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.saldoPorContaToolStripMenuItem.Text = "Saldo por conta";
             // 
             // editarToolStripMenuItem1
@@ -160,38 +157,17 @@
             // editarToolStripMenuItem
             // 
             this.editarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listaToolStripMenuItem,
-            this.novaToolStripMenuItem,
-            this.editarToolStripMenuItem2,
-            this.deletarToolStripMenuItem});
+            this.tsmiListaClasses});
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
             this.editarToolStripMenuItem.Size = new System.Drawing.Size(144, 20);
             this.editarToolStripMenuItem.Text = "Classificação Financeira";
             // 
-            // listaToolStripMenuItem
+            // tsmiListaClasses
             // 
-            this.listaToolStripMenuItem.Name = "listaToolStripMenuItem";
-            this.listaToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
-            this.listaToolStripMenuItem.Text = "Lista";
-            // 
-            // novaToolStripMenuItem
-            // 
-            this.novaToolStripMenuItem.Name = "novaToolStripMenuItem";
-            this.novaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.novaToolStripMenuItem.Text = "Nova";
-            this.novaToolStripMenuItem.Click += new System.EventHandler(this.TSMNovaClassificacao_Click);
-            // 
-            // editarToolStripMenuItem2
-            // 
-            this.editarToolStripMenuItem2.Name = "editarToolStripMenuItem2";
-            this.editarToolStripMenuItem2.Size = new System.Drawing.Size(111, 22);
-            this.editarToolStripMenuItem2.Text = "Editar";
-            // 
-            // deletarToolStripMenuItem
-            // 
-            this.deletarToolStripMenuItem.Name = "deletarToolStripMenuItem";
-            this.deletarToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
-            this.deletarToolStripMenuItem.Text = "Deletar";
+            this.tsmiListaClasses.Name = "tsmiListaClasses";
+            this.tsmiListaClasses.Size = new System.Drawing.Size(180, 22);
+            this.tsmiListaClasses.Text = "Lista";
+            this.tsmiListaClasses.Click += new System.EventHandler(this.tsmiListaClasses_Click);
             // 
             // frmControleFinanceiro
             // 
@@ -215,9 +191,6 @@
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem classiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem novaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem deletarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem deletarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem fluxoDeCaixaToolStripMenuItem;
@@ -229,7 +202,7 @@
         private System.Windows.Forms.ToolStripMenuItem saldoPorContaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem movimentaçõesPorPeríodoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem movimentaçõesPorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiListaClasses;
     }
 }
 

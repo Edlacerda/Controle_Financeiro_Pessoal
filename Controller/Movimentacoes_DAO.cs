@@ -80,8 +80,6 @@ namespace Controle_Financeiro_Pessoal.Controller
                 lista.Add(new Movimentos(Convert.ToInt32(dr[0]), Convert.ToInt32(dr[1]), Convert.ToInt32(dr[2]), Convert.ToInt32(dr[3]), Convert.ToDecimal(dr[4]), Convert.ToDateTime(dr[5]), Convert.ToString(dr[6]), Convert.ToString(dr[7])));
             }
             DBMovimentacoes.sqlConn.Close();
-            Console.ReadKey();
-
             return lista;
         }
     }

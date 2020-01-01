@@ -18,11 +18,13 @@ namespace Controle_Financeiro_Pessoal.Controller
         }
 
         // inserção da nova classe na lista, verificando primeiramente a inserção no DataBase
-        public bool InserirClasse(Classes novaClasse)
+        public bool InserirClasse(int IDCategoria, string Classe)
         {
-            if (AcessoDB.GravarClasse(novaClasse.Id_Categoria, novaClasse.Classe))
+            if (AcessoDB.GravarClasse(IDCategoria, Classe))
             {
-                ListaClasses.Add(novaClasse);
+                // ver como colocar Id da classe (gerado pelo banco de dados)
+                // Classes novaClasse = new Classes();
+                //ListaClasses.Add(novaClasse);
                 return true;
             }
             return false;

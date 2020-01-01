@@ -14,8 +14,9 @@ D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle_Financeiro_Pessoal.
 D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle Financeiro Pessoal.csproj.GenerateResource.cache
 D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle Financeiro Pessoal.exe
 D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle Financeiro Pessoal.pdb
-D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle_Financeiro_Pessoal.View.frmNovaClassificacao.resources
 D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle_Financeiro_Pessoal.View.frmNovaConta.resources
 D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle_Financeiro_Pessoal.frmControleFinanceiro.resources
 D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle_Financeiro_Pessoal.View.frmFluxoDeCaixa.resources
 D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle_Financeiro_Pessoal.View.frmNovaMovimentacao.resources
+D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle_Financeiro_Pessoal.View.frmNovaClassificacao.resources
+D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle_Financeiro_Pessoal.View.frmListaClassificacoes.resources

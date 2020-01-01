@@ -33,9 +33,9 @@ namespace Controle_Financeiro_Pessoal
             this.Hide();
         }
 
-        private void TSMNovaClassificacao_Click(object sender, EventArgs e)
+        private void tsmiListaClasses_Click(object sender, EventArgs e)
         {
-            frmNovaClassificacao x = new frmNovaClassificacao(this);
+            frmListaClassificacoes x = new frmListaClassificacoes(this);
             x.Show();
             this.Hide();
         }

@@ -12,7 +12,7 @@ namespace Controle_Financeiro_Pessoal.Model
         public int IdClasse { get; set; }
         public string Classe { get; set; }
 
-        public Classes(int idCategoria, int idClasse, string classe)
+        public Classes(int idClasse, int idCategoria,  string classe)
         {
             Id_Categoria = idCategoria;
             IdClasse = idClasse;
