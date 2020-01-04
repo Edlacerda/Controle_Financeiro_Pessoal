@@ -24,7 +24,7 @@ namespace Controle_Financeiro_Pessoal.View
             txtNomeCategoria.Enabled = false;
         }
 
-        //preenchendo categorias do 1 = ENTRADAS, 2 = SAÍDAS
+        //preenchendo das classses, conforme lista
         private void PreencherCmbIdClasse()
         {
             foreach (var x in classe.ListaClasses)

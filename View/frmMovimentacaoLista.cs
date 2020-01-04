@@ -61,6 +61,8 @@ namespace Controle_Financeiro_Pessoal.View
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            frmMovimentacaoExcluir x = new frmMovimentacaoExcluir(this);
+            x.Show();
         }
 
         // fechando este form, volta para o form inicial (que o chamou)

@@ -26,3 +26,4 @@ D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle_Financeiro_Pessoal.
 D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle_Financeiro_Pessoal.View.frmContaEditar.resources
 D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle_Financeiro_Pessoal.View.frmContaExcluir.resources
 D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle_Financeiro_Pessoal.View.frmMovimentacaoLista.resources
+D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle_Financeiro_Pessoal.View.frmMovimentacaoExcluir.resources

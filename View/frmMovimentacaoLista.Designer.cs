@@ -147,6 +147,7 @@
             this.Name = "frmMovimentacaoLista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LISTA DAS MOVIMENTAÇÕES";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMovimentacaoLista_FormClosed);
             this.ResumeLayout(false);
 
         }
