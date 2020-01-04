@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Controle_Financeiro_Pessoal.Model;
 using System.Data.SqlClient;
 using System.Data;
-
+using System.Globalization;
 
 namespace Controle_Financeiro_Pessoal.Controller
 {
@@ -52,7 +52,7 @@ namespace Controle_Financeiro_Pessoal.Controller
         // Método de alteração, necessário informar todos os parâmetros, considerando que não se sabe qual será alterado
         public bool AlterarMovimentacao(int id_Movimento, int id_Categoria, int id_Classe, int id_Conta, double valor, DateTime data, string fornecedor, string descricao)
         {
-            DBMovimentacoes.cmd = new SqlCommand("UPDATE Movimentacoes SET Id_Categoria = " + id_Categoria + ", Id_Classe = " + id_Classe + ", Id_Conta = " + id_Conta + ", Valor = " + valor + ", Data = " + data + ", Fornecedor = '" + fornecedor + "', Descricao = '" + descricao + "' WHERE IDMovimento = " + id_Movimento, DBMovimentacoes.sqlConn);
+            DBMovimentacoes.cmd = new SqlCommand("UPDATE Movimentacoes SET Id_Categoria = " + id_Categoria + ", Id_Classe = " + id_Classe + ", Id_Conta = " + id_Conta + ", Valor = " + valor.ToString("F2", CultureInfo.InvariantCulture) + ", Data = '" + data.ToString("yyyy-MM-dd") + "', Fornecedor = '" + fornecedor + "', Descricao = '" + descricao + "' WHERE IDMovimento = " + id_Movimento, DBMovimentacoes.sqlConn);
             if (conexão(DBMovimentacoes.cmd))
                 return true;
             return false;

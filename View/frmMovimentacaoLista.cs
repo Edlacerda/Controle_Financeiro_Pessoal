@@ -57,6 +57,8 @@ namespace Controle_Financeiro_Pessoal.View
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            frmMovimentacaoEditar x = new frmMovimentacaoEditar(this);
+            x.Show();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
