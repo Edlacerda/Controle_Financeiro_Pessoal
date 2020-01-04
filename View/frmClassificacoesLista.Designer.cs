@@ -107,12 +107,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(534, 345);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNovaClasse);
             this.Controls.Add(this.lvwClasses);
             this.Name = "frmClassificacoesLista";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LISTA DE CLASSIFICAÇÕES";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmListaClassificacoes_FormClosed);
             this.ResumeLayout(false);

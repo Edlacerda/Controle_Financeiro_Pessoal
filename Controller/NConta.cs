@@ -22,7 +22,7 @@ namespace Controle_Financeiro_Pessoal.Controller
 
         public bool InserirConta(Contas novaConta)
         {
-            if (AcessoDB.GravarConta(novaConta.Conta))
+            if (AcessoDB.GravarConta(novaConta.Conta, novaConta.Saldo))
             {
                 ListaContas.Add(novaConta);
                 return true;

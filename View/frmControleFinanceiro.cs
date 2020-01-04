@@ -20,7 +20,7 @@ namespace Controle_Financeiro_Pessoal
 
         private void tmsiContas_Click(object sender, EventArgs e)
         {
-            frmContaNova x = new frmContaNova(this);
+            frmContaLista x = new frmContaLista(this);
             x.Show();
             this.Hide();
         }

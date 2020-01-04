@@ -36,6 +36,7 @@
             this.tsmiRelatorios = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiFluxoDeCaixa = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiInformacoes = new System.Windows.Forms.ToolStripMenuItem();
+            this.saldoPorContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,7 +86,8 @@
             // tsmiRelatorios
             // 
             this.tsmiRelatorios.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiFluxoDeCaixa});
+            this.tsmiFluxoDeCaixa,
+            this.saldoPorContaToolStripMenuItem});
             this.tsmiRelatorios.Name = "tsmiRelatorios";
             this.tsmiRelatorios.Size = new System.Drawing.Size(71, 20);
             this.tsmiRelatorios.Text = "Relatórios";
@@ -93,7 +95,7 @@
             // tsmiFluxoDeCaixa
             // 
             this.tsmiFluxoDeCaixa.Name = "tsmiFluxoDeCaixa";
-            this.tsmiFluxoDeCaixa.Size = new System.Drawing.Size(151, 22);
+            this.tsmiFluxoDeCaixa.Size = new System.Drawing.Size(180, 22);
             this.tsmiFluxoDeCaixa.Text = "Fluxo de Caixa";
             this.tsmiFluxoDeCaixa.Click += new System.EventHandler(this.tsmiFluxoDeCaixa_Click);
             // 
@@ -103,6 +105,12 @@
             this.tsmiInformacoes.Size = new System.Drawing.Size(85, 20);
             this.tsmiInformacoes.Text = "Informações";
             this.tsmiInformacoes.Click += new System.EventHandler(this.tsmiInformacoes_Click);
+            // 
+            // saldoPorContaToolStripMenuItem
+            // 
+            this.saldoPorContaToolStripMenuItem.Name = "saldoPorContaToolStripMenuItem";
+            this.saldoPorContaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saldoPorContaToolStripMenuItem.Text = "Saldo por Conta";
             // 
             // frmControleFinanceiro
             // 
@@ -130,6 +138,7 @@
         private System.Windows.Forms.ToolStripMenuItem tmsiContas;
         private System.Windows.Forms.ToolStripMenuItem tsmiMovimentacoes;
         private System.Windows.Forms.ToolStripMenuItem tsmiInformacoes;
+        private System.Windows.Forms.ToolStripMenuItem saldoPorContaToolStripMenuItem;
     }
 }
 

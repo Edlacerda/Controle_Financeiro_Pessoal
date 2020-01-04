@@ -70,6 +70,18 @@
     <Compile Include="View\frmClassificacaoEditar.Designer.cs">
       <DependentUpon>frmClassificacaoEditar.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmContaNova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmContaNova.Designer.cs">
+      <DependentUpon>frmContaNova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmContaLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmContaLista.Designer.cs">
+      <DependentUpon>frmContaLista.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmClassificacoesLista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,12 +93,6 @@
     </Compile>
     <Compile Include="View\frmClassificacaoNova.Designer.cs">
       <DependentUpon>frmClassificacaoNova.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\frmContaNova.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmContaNova.Designer.cs">
-      <DependentUpon>frmContaNova.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmControleFinanceiro.cs">
       <SubType>Form</SubType>
@@ -123,14 +129,17 @@
     <EmbeddedResource Include="View\frmClassificacaoEditar.resx">
       <DependentUpon>frmClassificacaoEditar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmContaNova.resx">
+      <DependentUpon>frmContaNova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmContaLista.resx">
+      <DependentUpon>frmContaLista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmClassificacoesLista.resx">
       <DependentUpon>frmClassificacoesLista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmClassificacaoNova.resx">
       <DependentUpon>frmClassificacaoNova.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\frmContaNova.resx">
-      <DependentUpon>frmContaNova.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmControleFinanceiro.resx">
       <DependentUpon>frmControleFinanceiro.cs</DependentUpon>

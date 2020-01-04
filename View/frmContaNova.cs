@@ -1,21 +1,78 @@
 ﻿using System;
 using System.Windows.Forms;
+using Controle_Financeiro_Pessoal.Controller;
 
 namespace Controle_Financeiro_Pessoal.View
 {
     public partial class frmContaNova : Form
     {
-        frmControleFinanceiro formInicial;
+        frmContaLista frmlistacontas;
+        NConta Conta;
+        Movimentacoes movimento;
 
-        public frmContaNova(frmControleFinanceiro F)
+        public frmContaNova(frmContaLista F)
         {
             InitializeComponent();
-            formInicial = F;
+            // iniciado as classes e categoria para preenchimento do nome da categoria e comparativo se existe outra igual
+            frmlistacontas = F;
+            Conta = new NConta();
+            movimento = new Movimentacoes();
+            grpTransferencia.Visible = false;
         }
 
-        private void frmNovaConta_FormClosed(object sender, FormClosedEventArgs e)
+        //mostrar group box dos dados de transferência, caso seja marcado o checkbox de transferência
+        private void chkTransferencia_Click(object sender, EventArgs e)
         {
-            formInicial.Show();
+            if (chkTransferencia.Checked)
+            {
+                grpTransferencia.Visible = true;
+                PreencherCmbIdContaTransf();
+                txtSaldoAtualTransf.Enabled = false;
+                txtNomeContaTransf.Enabled = false;
+            }
+            else
+            {
+                grpTransferencia.Visible = false;
+            }
+        }
+
+        //preencher o combobox do id da classe de transferência
+        private void PreencherCmbIdContaTransf()
+        {
+            foreach (var x in Conta.ListaContas)
+            {
+                cmbIdContaTransf.Items.Add(x.Id_Conta);
+            }
+        }
+
+        // preencher nome e saldo das contas de transferência
+        private void cmbIdContaTransf_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtSaldoAtualTransf.Enabled = true;
+            txtNomeContaTransf.Enabled = true;
+
+            foreach (var x in Conta.ListaContas)
+            {
+                if (cmbIdContaTransf.Text == Convert.ToString(x.Id_Conta))
+                {
+                    txtSaldoAtualTransf.Text = Convert.ToString(x.Saldo);
+                    txtNomeContaTransf.Text = x.Conta;
+                }
+            }
+            txtSaldoAtualTransf.Enabled = false;
+            txtNomeContaTransf.Enabled = false;
+        }
+
+        // método para salvar classe através do click no botão salvar
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // botão cancelar fecha o form
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
