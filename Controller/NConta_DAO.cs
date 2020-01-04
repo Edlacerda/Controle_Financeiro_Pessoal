@@ -47,7 +47,7 @@ namespace Controle_Financeiro_Pessoal.Controller
         public bool AlterarConta(int id_Conta, string conta)
         {
             //colocar verificação de se existir movimentações dentro da conta
-            DBContas.cmd = new SqlCommand("use DB_Financeiro UPDATE Conta SET Conta = '" + conta + "' WHERE IdClasse = " + id_Conta, DBContas.sqlConn);
+            DBContas.cmd = new SqlCommand("UPDATE Conta SET Conta = '" + conta + "' WHERE IdConta = " + id_Conta, DBContas.sqlConn);
             if (conexão(DBContas.cmd))
                 return true;
             return false;
@@ -58,7 +58,7 @@ namespace Controle_Financeiro_Pessoal.Controller
         {
             //colocar verificação de se existir movimentações dentro da conta
 
-            DBContas.cmd = new SqlCommand("use DB_Financeiro DELETE FROM Conta WHERE IdConta = " + Id_Conta, DBContas.sqlConn);
+            DBContas.cmd = new SqlCommand("DELETE FROM Conta WHERE IdConta = " + Id_Conta, DBContas.sqlConn);
             if (conexão(DBContas.cmd))
                 return true;
             return false;

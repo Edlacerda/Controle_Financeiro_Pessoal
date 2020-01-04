@@ -23,3 +23,4 @@ D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle_Financeiro_Pessoal.
 D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle_Financeiro_Pessoal.View.frmClassificacaoEditar.resources
 D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle_Financeiro_Pessoal.View.frmClassificacaoExcluir.resources
 D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle_Financeiro_Pessoal.View.frmContaLista.resources
+D:\Eduardo\SI\Controle_Financeiro_Pessoal\obj\Debug\Controle_Financeiro_Pessoal.View.frmContaEditar.resources

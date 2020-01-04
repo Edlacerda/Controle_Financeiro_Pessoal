@@ -97,3 +97,7 @@ VALUES (2, 'Transporte')
 INSERT INTO Classe
 (Id_Categoria, Classe)
 VALUES (2, 'Outro')
+
+INSERT INTO CONTA
+(Conta, Saldo)
+VALUES ('Dinheiro', 0)

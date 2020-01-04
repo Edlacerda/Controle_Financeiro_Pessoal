@@ -144,7 +144,7 @@
             this.Controls.Add(this.lblNomeClasse);
             this.Controls.Add(this.btnSalvar);
             this.Name = "frmClassificacaoEditar";
-            this.Text = "NOVA CLASSIFICAÇÃO";
+            this.Text = "EDITAR CLASSIFICAÇÃO";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -58,6 +58,12 @@
     <Compile Include="Model\Contas.cs" />
     <Compile Include="Model\Data.cs" />
     <Compile Include="Model\Movimentos.cs" />
+    <Compile Include="View\frmContaEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmContaEditar.Designer.cs">
+      <DependentUpon>frmContaEditar.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmClassificacaoExcluir.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmContaEditar.resx">
+      <DependentUpon>frmContaEditar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmClassificacaoExcluir.resx">
       <DependentUpon>frmClassificacaoExcluir.cs</DependentUpon>
     </EmbeddedResource>

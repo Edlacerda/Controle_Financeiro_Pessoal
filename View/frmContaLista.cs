@@ -17,7 +17,7 @@ namespace Controle_Financeiro_Pessoal.View
             PreencherLvwContas();
         }
 
-        public void AtualizarLvwClasses()
+        public void AtualizarLvwConta()
         {
             lvwContas.Items.Clear();
             PreencherLvwContas();
@@ -47,6 +47,8 @@ namespace Controle_Financeiro_Pessoal.View
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            frmContaEditar x = new frmContaEditar(this);
+            x.Show();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)

@@ -143,7 +143,7 @@
             this.Controls.Add(this.lblNomeClasse);
             this.Controls.Add(this.btnExcluir);
             this.Name = "frmClassificacaoExcluir";
-            this.Text = "NOVA CLASSIFICAÇÃO";
+            this.Text = "EXCLUIR CLASSIFICAÇÃO";
             this.ResumeLayout(false);
             this.PerformLayout();
 
