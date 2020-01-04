@@ -13,7 +13,7 @@ namespace Controle_Financeiro_Pessoal
 
         private void tsmiMovimentacoes_Click(object sender, EventArgs e)
         {
-            frmMovimentacaoNova x = new frmMovimentacaoNova(this);
+            frmMovimentacaoLista x = new frmMovimentacaoLista(this);
             x.Show();
             this.Hide();
         }
