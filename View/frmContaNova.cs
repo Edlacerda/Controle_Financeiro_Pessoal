@@ -53,9 +53,9 @@ namespace Controle_Financeiro_Pessoal.View
 
             foreach (var x in Conta.ListaContas)
             {
-                if (cmbIdContaTransf.Text == Convert.ToString(x.Id_Conta))
+                if (cmbIdContaTransf.Text == x.Id_Conta.ToString())
                 {
-                    txtSaldoAtualTransf.Text = Convert.ToString(x.Saldo);
+                    txtSaldoAtualTransf.Text = x.Saldo.ToString("C");
                     txtNomeContaTransf.Text = x.Conta;
                 }
             }

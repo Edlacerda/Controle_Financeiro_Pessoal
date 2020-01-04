@@ -31,7 +31,7 @@ namespace Controle_Financeiro_Pessoal.Controller
         }
 
         // método booleano para informar ao usuário se obteve sucesso ao salvar as informações no banco de dado
-        public bool GravarConta(string conta, int saldo)
+        public bool GravarConta(string conta, double saldo)
         {
             // definindo sql de insersão e atribuindo os parâmetros
             DBContas.cmd = new SqlCommand("insert into Conta(Conta, Saldo) values (@conta, @saldo)", DBContas.sqlConn);
@@ -74,7 +74,7 @@ namespace Controle_Financeiro_Pessoal.Controller
             SqlDataReader dr = DBContas.cmd.ExecuteReader();
             while (dr.Read())
             {
-                lista.Add(new Contas(Convert.ToInt32(dr[0]), Convert.ToString(dr[1]), Convert.ToInt32(dr[2])));
+                lista.Add(new Contas(Convert.ToInt32(dr[0]), Convert.ToString(dr[1]), Convert.ToDouble(dr[2])));
             }
             DBContas.sqlConn.Close();
             return lista;

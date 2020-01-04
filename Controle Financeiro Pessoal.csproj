@@ -76,6 +76,12 @@
     <Compile Include="View\frmClassificacaoEditar.Designer.cs">
       <DependentUpon>frmClassificacaoEditar.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmContaExcluir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmContaExcluir.Designer.cs">
+      <DependentUpon>frmContaExcluir.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmContaNova.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmClassificacaoEditar.resx">
       <DependentUpon>frmClassificacaoEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmContaExcluir.resx">
+      <DependentUpon>frmContaExcluir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmContaNova.resx">
       <DependentUpon>frmContaNova.cs</DependentUpon>

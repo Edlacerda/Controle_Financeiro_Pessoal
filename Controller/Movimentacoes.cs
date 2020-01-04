@@ -47,7 +47,7 @@ namespace Controle_Financeiro_Pessoal.Controller
         }
 
         // Modifica movimento caso consiga alterar no DB
-        public bool AlterarMoviventacao(int Id_Movimento, int Id_Categoria, int Id_Classe, int Id_Conta, decimal Valor, DateTime Data, string Fornecedor, string Descricao)
+        public bool AlterarMoviventacao(int Id_Movimento, int Id_Categoria, int Id_Classe, int Id_Conta, double Valor, DateTime Data, string Fornecedor, string Descricao)
         {
             if (AcessoDB.AlterarMovimentacao(Id_Movimento, Id_Categoria, Id_Classe, Id_Conta, Valor, Data, Fornecedor, Descricao))
             {

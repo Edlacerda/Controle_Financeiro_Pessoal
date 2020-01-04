@@ -33,7 +33,7 @@ namespace Controle_Financeiro_Pessoal.View
             {
                 ListViewItem item = new ListViewItem(Convert.ToString(x.Id_Conta));
                 item.SubItems.Add(x.Conta);
-                item.SubItems.Add(Convert.ToString(x.Saldo));
+                item.SubItems.Add(x.Saldo.ToString("C"));
                 lvwContas.Items.Add(item);
             }
         }
@@ -53,6 +53,8 @@ namespace Controle_Financeiro_Pessoal.View
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            frmContaExcluir x = new frmContaExcluir(this);
+            x.Show();
         }
 
         // fechando este form, volta para o form inicial (que o chamou)

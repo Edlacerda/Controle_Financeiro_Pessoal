@@ -32,7 +32,7 @@ namespace Controle_Financeiro_Pessoal.Controller
         }
 
         // método booleano para informar ao usuário se obteve sucesso ao salvar as informações no banco de dado
-        public bool GravarMovimentacao(int id_Categoria, int id_Classe, int id_Conta, decimal valor, DateTime data, string fornecedor, string descricao)
+        public bool GravarMovimentacao(int id_Categoria, int id_Classe, int id_Conta, double valor, DateTime data, string fornecedor, string descricao)
         {
             // definindo sql de insersão e atribuindo os parâmetros
             DBMovimentacoes.cmd = new SqlCommand("insert into Movimentacoes(Id_Categoria, Id_Classe, ID_Conta, Valor, Data, Fornecedor, Descricao) values (@idCategoria, @idClasse, @idConta, @valor, @data, @fornecedor, @descricao)", DBMovimentacoes.sqlConn);
@@ -50,7 +50,7 @@ namespace Controle_Financeiro_Pessoal.Controller
         }
 
         // Método de alteração, necessário informar todos os parâmetros, considerando que não se sabe qual será alterado
-        public bool AlterarMovimentacao(int id_Movimento, int id_Categoria, int id_Classe, int id_Conta, decimal valor, DateTime data, string fornecedor, string descricao)
+        public bool AlterarMovimentacao(int id_Movimento, int id_Categoria, int id_Classe, int id_Conta, double valor, DateTime data, string fornecedor, string descricao)
         {
             DBMovimentacoes.cmd = new SqlCommand("use DB_Financeiro UPDATE Movimentacoes SET Id_Categoria = " + id_Categoria + ", Id_Classe = " + id_Classe + ", Id_Conta = " + id_Conta + ", Valor = " + valor + ", Data = " + data + ", Fornecedor = '" + fornecedor + "', Descricao = '" + descricao + "' WHERE IDMovimento = " + id_Movimento, DBMovimentacoes.sqlConn);
             if (conexão(DBMovimentacoes.cmd))
@@ -77,7 +77,7 @@ namespace Controle_Financeiro_Pessoal.Controller
             SqlDataReader dr = DBMovimentacoes.cmd.ExecuteReader();
             while (dr.Read())
             {
-                lista.Add(new Movimentos(Convert.ToInt32(dr[0]), Convert.ToInt32(dr[1]), Convert.ToInt32(dr[2]), Convert.ToInt32(dr[3]), Convert.ToDecimal(dr[4]), Convert.ToDateTime(dr[5]), Convert.ToString(dr[6]), Convert.ToString(dr[7])));
+                lista.Add(new Movimentos(Convert.ToInt32(dr[0]), Convert.ToInt32(dr[1]), Convert.ToInt32(dr[2]), Convert.ToInt32(dr[3]), Convert.ToDouble(dr[4]), Convert.ToDateTime(dr[5]), Convert.ToString(dr[6]), Convert.ToString(dr[7])));
             }
             DBMovimentacoes.sqlConn.Close();
             return lista;

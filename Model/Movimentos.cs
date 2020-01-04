@@ -8,12 +8,12 @@ namespace Controle_Financeiro_Pessoal.Model
         public int Id_Categoria { get; set; }
         public int Id_Classe { get; set; }
         public int Id_Conta { get; set; }
-        public decimal Valor { get; set; }
+        public double Valor { get; set; }
         public DateTime Data { get; set; }
         public string Fornecedor { get; set; }
         public string Descricao { get; set; }
 
-        public Movimentos (int idMovimento, int idCategoria, int idClasse, int idConta, decimal valor, DateTime data, string fornecedor, string descricao)
+        public Movimentos (int idMovimento, int idCategoria, int idClasse, int idConta, double valor, DateTime data, string fornecedor, string descricao)
         {
             Id_Movimento = idMovimento;
             Id_Categoria = idCategoria;

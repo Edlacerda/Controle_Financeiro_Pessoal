@@ -74,11 +74,11 @@ namespace Controle_Financeiro_Pessoal.View
             {
                 frmlistaclasses.AtualizarLvwClasses();
                 MessageBox.Show("Classe excluída com sucesso!");
+                // fecha o form quando consegue excluir classe
+                this.Close();
             }
             else
                 MessageBox.Show("Não foi possível alterar a Classe.\n\nVerifique se todos os campos estão preenchidos corretamente");
-            // toda vez que clicar em salvar, fecha o form
-            this.Close();
         }
 
     }
