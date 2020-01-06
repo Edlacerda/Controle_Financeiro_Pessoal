@@ -31,6 +31,8 @@ namespace Controle_Financeiro_Pessoal.View
             {
                 cmbIdClasse.Items.Add(x.IdClasse);
             }
+            cmbIdClasse.Items.Remove(6);
+            cmbIdClasse.Items.Remove(1);
         }
 
         // botão cancelar fecha o form
@@ -70,12 +72,15 @@ namespace Controle_Financeiro_Pessoal.View
         // método para exlcluir classe através do click no botão Excluir
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            if (classe.ExcluirClasse(Convert.ToInt32(cmbIdClasse.Text)))
+            if (cmbIdClasse.Text != "")
             {
-                frmlistaclasses.AtualizarLvwClasses();
-                MessageBox.Show("Classe excluída com sucesso!");
-                // fecha o form quando consegue excluir classe
-                this.Close();
+                if (classe.ExcluirClasse(Convert.ToInt32(cmbIdClasse.Text)))
+                {
+                    frmlistaclasses.AtualizarLvwClasses();
+                    MessageBox.Show("Classe excluída com sucesso!");
+                    // fecha o form quando consegue excluir classe
+                    this.Close();
+                }
             }
             else
                 MessageBox.Show("Não foi possível alterar a Classe.\n\nVerifique se todos os campos estão preenchidos corretamente");

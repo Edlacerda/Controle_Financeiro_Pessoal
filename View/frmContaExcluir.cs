@@ -27,6 +27,7 @@ namespace Controle_Financeiro_Pessoal.View
             {
                 cmbIdConta.Items.Add(x.Id_Conta);
             }
+            cmbIdConta.Items.RemoveAt(0);
         }
 
         // preencher nome e saldo das contas de transferência
@@ -39,7 +40,7 @@ namespace Controle_Financeiro_Pessoal.View
             {
                 if (cmbIdConta.Text == x.Id_Conta.ToString())
                 {
-                    txtSaldoAtual.Text = x.Saldo.ToString("C");
+                    txtSaldoAtual.Text = x.Saldo.ToString("0.00");
                     txtNomeConta.Text = x.Conta;
                 }
             }

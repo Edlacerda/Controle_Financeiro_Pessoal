@@ -55,7 +55,7 @@ namespace Controle_Financeiro_Pessoal.View
             {
                 if (cmbIdContaTransf.Text == x.Id_Conta.ToString())
                 {
-                    txtSaldoAtualTransf.Text = x.Saldo.ToString("C");
+                    txtSaldoAtualTransf.Text = x.Saldo.ToString("0.00");
                     txtNomeContaTransf.Text = x.Conta;
                 }
             }
@@ -63,12 +63,44 @@ namespace Controle_Financeiro_Pessoal.View
             txtNomeContaTransf.Enabled = false;
         }
 
-        // método para salvar classe através do click no botão salvar
+        // método para salvar conta através do click no botão salvar, verificando se conta de transferência possui saldo suficiente
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             if (VerificaPreenchimento())
             {
+                if (chkTransferencia.Checked)
+                {
+                    if (Convert.ToDouble(txtSaldoAtualTransf.Text) > Convert.ToDouble(txtSaldoInicial.Text))
+                    {
+                        movimento.InserirMovimento(2, 6, Convert.ToInt32(cmbIdContaTransf.Text), Convert.ToDouble(txtSaldoInicial.Text), DateTime.Today, txtNomeConta.Text, "Transferência para a nova conta");
+                        CriarNovaConta();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Não foi possível criar nova conta.\n\nSaldo da conta de transferência insuficiente");
+                    }
+                }
+                else
+                {
+                    CriarNovaConta();
+                }
             }
+            else
+                MessageBox.Show("Não foi possível criar nova conta.\n\nVerifique se todos os campos estão preenchidos corretamente");
+        }
+
+        // método para criar nova conta
+        private void CriarNovaConta()
+        {
+            if (Conta.InserirConta(txtNomeConta.Text, Convert.ToDouble(txtSaldoInicial.Text)))
+            {
+                frmlistacontas.AtualizarLvwConta();
+                MessageBox.Show("Conta criada com sucesso!");
+                // toda vez que clicar em salvar, fecha o form
+                this.Close();
+            }
+            else
+                MessageBox.Show("Não foi possível criar nova conta.\n\nVerifique se todos os campos estão preenchidos corretamente");
         }
 
         // verifica se todos os campos estão preenchidos

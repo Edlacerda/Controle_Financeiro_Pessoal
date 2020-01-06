@@ -79,13 +79,11 @@
             // 
             // column_Categoria
             // 
-            this.column_Categoria.DisplayIndex = 2;
             this.column_Categoria.Text = "CATEGORIA";
             this.column_Categoria.Width = 150;
             // 
             // column_Classe
             // 
-            this.column_Classe.DisplayIndex = 3;
             this.column_Classe.Text = "CLASSE";
             this.column_Classe.Width = 150;
             // 
@@ -93,9 +91,9 @@
             // 
             this.lvwmMovimentacoes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.column_IDMovimento,
+            this.column_Conta,
             this.column_Categoria,
             this.column_Classe,
-            this.column_Conta,
             this.column_Valor,
             this.column_Data,
             this.column_Fornecedor,
@@ -110,7 +108,6 @@
             // 
             // column_Conta
             // 
-            this.column_Conta.DisplayIndex = 1;
             this.column_Conta.Text = "CONTA";
             this.column_Conta.Width = 150;
             // 

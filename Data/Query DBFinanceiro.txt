@@ -36,68 +36,76 @@ VALUES ('SAIDAS')
 
 INSERT INTO Classe
 (Id_Categoria, Classe)
-VALUES (1, 'Investimento')
+VALUES (1, 'NOVA CONTA')
 
 INSERT INTO Classe
 (Id_Categoria, Classe)
-VALUES (1, 'Remuneração')
+VALUES (1, 'REMUNERAÇÃO')
 
 INSERT INTO Classe
 (Id_Categoria, Classe)
-VALUES (1, 'Rendimento')
+VALUES (1, 'INVESTIMENTO')
 
 INSERT INTO Classe
 (Id_Categoria, Classe)
-VALUES (1, 'Outro')
+VALUES (1, 'RENDIMENTO')
 
 INSERT INTO Classe
 (Id_Categoria, Classe)
-VALUES (2, 'Alimentação')
+VALUES (1, 'OUTRO')
 
 INSERT INTO Classe
 (Id_Categoria, Classe)
-VALUES (2, 'Aquisição')
+VALUES (2, 'TRANSFERENCIA')
 
 INSERT INTO Classe
 (Id_Categoria, Classe)
-VALUES (2, 'Comodidade')
+VALUES (2, 'ALIMENTAÇÃO')
 
 INSERT INTO Classe
 (Id_Categoria, Classe)
-VALUES (2, 'Doação')
+VALUES (2, 'AQUISIÇÃO')
 
 INSERT INTO Classe
 (Id_Categoria, Classe)
-VALUES (2, 'Educação')
+VALUES (2, 'COMODIDADE')
 
 INSERT INTO Classe
 (Id_Categoria, Classe)
-VALUES (2, 'Habitação')
+VALUES (2, 'DOAÇÃO')
 
 INSERT INTO Classe
 (Id_Categoria, Classe)
-VALUES (2, 'Investimento')
+VALUES (2, 'EDUCAÇÃO')
 
 INSERT INTO Classe
 (Id_Categoria, Classe)
-VALUES (2, 'Lazer')
+VALUES (2, 'HABITAÇÃO')
 
 INSERT INTO Classe
 (Id_Categoria, Classe)
-VALUES (2, 'Presente')
+VALUES (2, 'INVESTIMENTO')
 
 INSERT INTO Classe
 (Id_Categoria, Classe)
-VALUES (2, 'Taxa')
+VALUES (2, 'LAZER')
 
 INSERT INTO Classe
 (Id_Categoria, Classe)
-VALUES (2, 'Transporte')
+VALUES (2, 'PRESENTE')
 
 INSERT INTO Classe
 (Id_Categoria, Classe)
-VALUES (2, 'Outro')
+VALUES (2, 'TAXA')
+
+INSERT INTO Classe
+(Id_Categoria, Classe)
+VALUES (2, 'TRANSPORTE')
+
+INSERT INTO Classe
+(Id_Categoria, Classe)
+VALUES (2, 'OUTRO')
 
 INSERT INTO CONTA
 (Conta, Saldo)
-VALUES ('Dinheiro', 0)
+VALUES ('DINHEIRO', 0)

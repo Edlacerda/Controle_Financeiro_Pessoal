@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Controle_Financeiro_Pessoal.Model;
 
 namespace Controle_Financeiro_Pessoal.Controller
@@ -16,11 +17,14 @@ namespace Controle_Financeiro_Pessoal.Controller
             ListaContas = AcessoDB.LerContas();
         }
 
-        public bool InserirConta(Contas novaConta)
+        public bool InserirConta(string conta, double saldo)
         {
-            if (AcessoDB.GravarConta(novaConta.Conta, novaConta.Saldo))
+            if (AcessoDB.GravarConta(conta, 0))
             {
-                ListaContas.Add(novaConta);
+                movimentos = new Movimentacoes();
+                ListaContas = AcessoDB.LerContas();
+                movimentos.InserirMovimento(1, 1, ListaContas[ListaContas.Count - 1].Id_Conta, saldo, DateTime.Today, conta, "Nova Conta");
+                ////ListaContas.Add(novaConta);
                 return true;
             }
             return false;
@@ -38,7 +42,7 @@ namespace Controle_Financeiro_Pessoal.Controller
             return null;
         }
 
-        //
+        // método para alterar saldo da conta toda vez que fizer uma nova conta ou movimento
         public bool AlterarSaldo(int idCategoria, int idConta, double valor)
         {
             Conta = AcessarConta(idConta);

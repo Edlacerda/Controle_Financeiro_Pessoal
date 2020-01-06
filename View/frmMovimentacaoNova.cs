@@ -114,7 +114,7 @@ namespace Controle_Financeiro_Pessoal.View
                     MessageBox.Show("Movimentação inserida com sucesso!");
                     // toda vez que clicar em salvar, fecha o form
                     this.Close();
-                }
+                } 
             }
             else
                 MessageBox.Show("Não foi possível inserir a movimentação.\n\nVerifique se todos os campos estão preenchidos corretamente");

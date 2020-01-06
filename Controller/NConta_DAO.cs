@@ -37,7 +37,7 @@ namespace Controle_Financeiro_Pessoal.Controller
             // definindo sql de insersão e atribuindo os parâmetros
             DBContas.cmd = new SqlCommand("insert into Conta(Conta, Saldo) values (@conta, @saldo)", DBContas.sqlConn);
             DBContas.cmd.Parameters.Add("@conta", SqlDbType.VarChar).Value = conta;
-            DBContas.cmd.Parameters.Add("@saldo", SqlDbType.Int).Value = saldo;
+            DBContas.cmd.Parameters.Add("@saldo", SqlDbType.Decimal).Value = saldo;
 
             if (conexão(DBContas.cmd))
                 return true;

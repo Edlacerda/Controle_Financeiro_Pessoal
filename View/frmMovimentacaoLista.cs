@@ -38,7 +38,7 @@ namespace Controle_Financeiro_Pessoal.View
             foreach (var x in movimento.ListaMovimentacoes)
             {
                 ListViewItem item = new ListViewItem(x.Id_Movimento.ToString());
-                item.SubItems.Add(conta.ListaContas[x.Id_Conta - 1].Conta);
+                item.SubItems.Add(conta.ListaContas[conta.ListaContas.Count - 1].Conta);
                 item.SubItems.Add(categoria.NomeCategoria(x.Id_Categoria));
                 item.SubItems.Add(classe.ListaClasses[x.Id_Classe - 1].Classe);
                 item.SubItems.Add(x.Valor.ToString("C"));
@@ -49,13 +49,11 @@ namespace Controle_Financeiro_Pessoal.View
             }
         }
 
-
         private void btnNovoMovimento_Click(object sender, EventArgs e)
         {
             frmMovimentacaoNova x = new frmMovimentacaoNova(this);
             x.Show();
         }
-
 
         private void btnEditar_Click(object sender, EventArgs e)
         {

@@ -37,6 +37,8 @@ namespace Controle_Financeiro_Pessoal.View
                 if (cmbIdCategoria.Text == x.Id_Categoria.ToString())
                     cmbIdClasse.Items.Add(x.IdClasse);
             }
+            cmbIdClasse.Items.Remove(6);
+            cmbIdClasse.Items.Remove(1);
         }
 
         // botão cancelar fecha o form
