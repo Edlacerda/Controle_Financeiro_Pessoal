@@ -43,7 +43,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(258, 60);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(90, 25);
-            this.btnExcluir.TabIndex = 1;
+            this.btnExcluir.TabIndex = 3;
             this.btnExcluir.Text = "EXCLUIR";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -53,7 +53,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(354, 60);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(90, 25);
-            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -81,14 +81,14 @@
             this.txtNomeConta.Location = new System.Drawing.Point(102, 34);
             this.txtNomeConta.Name = "txtNomeConta";
             this.txtNomeConta.Size = new System.Drawing.Size(342, 20);
-            this.txtNomeConta.TabIndex = 4;
+            this.txtNomeConta.TabIndex = 2;
             // 
             // txtSaldoAtual
             // 
             this.txtSaldoAtual.Location = new System.Drawing.Point(320, 8);
             this.txtSaldoAtual.Name = "txtSaldoAtual";
             this.txtSaldoAtual.Size = new System.Drawing.Size(124, 20);
-            this.txtSaldoAtual.TabIndex = 4;
+            this.txtSaldoAtual.TabIndex = 1;
             // 
             // lblIdConta
             // 
@@ -105,7 +105,7 @@
             this.cmbIdConta.Location = new System.Drawing.Point(102, 7);
             this.cmbIdConta.Name = "cmbIdConta";
             this.cmbIdConta.Size = new System.Drawing.Size(82, 21);
-            this.cmbIdConta.TabIndex = 6;
+            this.cmbIdConta.TabIndex = 0;
             this.cmbIdConta.SelectedIndexChanged += new System.EventHandler(this.cmbIdConta_SelectedIndexChanged);
             // 
             // frmContaExcluir
@@ -123,7 +123,7 @@
             this.Controls.Add(this.lblSaldoAtual);
             this.Controls.Add(this.btnExcluir);
             this.Name = "frmContaExcluir";
-            this.Text = "NOVA CONTA";
+            this.Text = "EXCLUIR CONTA";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -38,11 +38,11 @@
             this.lblDadosTransferencia = new System.Windows.Forms.Label();
             this.lblIdTransferencia = new System.Windows.Forms.Label();
             this.grpTransferencia = new System.Windows.Forms.GroupBox();
-            this.lblNomeContaTransf = new System.Windows.Forms.Label();
-            this.txtNomeContaTransf = new System.Windows.Forms.TextBox();
-            this.lblSaldoAtual = new System.Windows.Forms.Label();
-            this.txtSaldoAtualTransf = new System.Windows.Forms.TextBox();
             this.cmbIdContaTransf = new System.Windows.Forms.ComboBox();
+            this.txtSaldoAtualTransf = new System.Windows.Forms.TextBox();
+            this.txtNomeContaTransf = new System.Windows.Forms.TextBox();
+            this.lblNomeContaTransf = new System.Windows.Forms.Label();
+            this.lblSaldoAtual = new System.Windows.Forms.Label();
             this.grpTransferencia.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +51,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(247, 31);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(90, 25);
-            this.btnSalvar.TabIndex = 1;
+            this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -70,14 +70,14 @@
             this.txtNomeConta.Location = new System.Drawing.Point(101, 6);
             this.txtNomeConta.Name = "txtNomeConta";
             this.txtNomeConta.Size = new System.Drawing.Size(342, 20);
-            this.txtNomeConta.TabIndex = 4;
+            this.txtNomeConta.TabIndex = 0;
             // 
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(353, 31);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(90, 25);
-            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -96,7 +96,7 @@
             this.txtSaldoInicial.Location = new System.Drawing.Point(101, 34);
             this.txtSaldoInicial.Name = "txtSaldoInicial";
             this.txtSaldoInicial.Size = new System.Drawing.Size(124, 20);
-            this.txtSaldoInicial.TabIndex = 4;
+            this.txtSaldoInicial.TabIndex = 1;
             // 
             // chkTransferencia
             // 
@@ -104,7 +104,7 @@
             this.chkTransferencia.Location = new System.Drawing.Point(15, 62);
             this.chkTransferencia.Name = "chkTransferencia";
             this.chkTransferencia.Size = new System.Drawing.Size(163, 17);
-            this.chkTransferencia.TabIndex = 7;
+            this.chkTransferencia.TabIndex = 2;
             this.chkTransferencia.Text = "Transferência de outra conta";
             this.chkTransferencia.UseVisualStyleBackColor = true;
             this.chkTransferencia.Click += new System.EventHandler(this.chkTransferencia_Click);
@@ -143,6 +143,29 @@
             this.grpTransferencia.TabIndex = 8;
             this.grpTransferencia.TabStop = false;
             // 
+            // cmbIdContaTransf
+            // 
+            this.cmbIdContaTransf.FormattingEnabled = true;
+            this.cmbIdContaTransf.Location = new System.Drawing.Point(97, 28);
+            this.cmbIdContaTransf.Name = "cmbIdContaTransf";
+            this.cmbIdContaTransf.Size = new System.Drawing.Size(82, 21);
+            this.cmbIdContaTransf.TabIndex = 3;
+            this.cmbIdContaTransf.SelectedIndexChanged += new System.EventHandler(this.cmbIdContaTransf_SelectedIndexChanged);
+            // 
+            // txtSaldoAtualTransf
+            // 
+            this.txtSaldoAtualTransf.Location = new System.Drawing.Point(315, 29);
+            this.txtSaldoAtualTransf.Name = "txtSaldoAtualTransf";
+            this.txtSaldoAtualTransf.Size = new System.Drawing.Size(124, 20);
+            this.txtSaldoAtualTransf.TabIndex = 4;
+            // 
+            // txtNomeContaTransf
+            // 
+            this.txtNomeContaTransf.Location = new System.Drawing.Point(97, 55);
+            this.txtNomeContaTransf.Name = "txtNomeContaTransf";
+            this.txtNomeContaTransf.Size = new System.Drawing.Size(342, 20);
+            this.txtNomeContaTransf.TabIndex = 5;
+            // 
             // lblNomeContaTransf
             // 
             this.lblNomeContaTransf.AutoSize = true;
@@ -152,13 +175,6 @@
             this.lblNomeContaTransf.TabIndex = 2;
             this.lblNomeContaTransf.Text = "NOME CONTA";
             // 
-            // txtNomeContaTransf
-            // 
-            this.txtNomeContaTransf.Location = new System.Drawing.Point(97, 55);
-            this.txtNomeContaTransf.Name = "txtNomeContaTransf";
-            this.txtNomeContaTransf.Size = new System.Drawing.Size(342, 20);
-            this.txtNomeContaTransf.TabIndex = 4;
-            // 
             // lblSaldoAtual
             // 
             this.lblSaldoAtual.AutoSize = true;
@@ -167,22 +183,6 @@
             this.lblSaldoAtual.Size = new System.Drawing.Size(81, 13);
             this.lblSaldoAtual.TabIndex = 2;
             this.lblSaldoAtual.Text = "SALDO ATUAL";
-            // 
-            // txtSaldoAtualTransf
-            // 
-            this.txtSaldoAtualTransf.Location = new System.Drawing.Point(315, 29);
-            this.txtSaldoAtualTransf.Name = "txtSaldoAtualTransf";
-            this.txtSaldoAtualTransf.Size = new System.Drawing.Size(124, 20);
-            this.txtSaldoAtualTransf.TabIndex = 4;
-            // 
-            // cmbIdContaTransf
-            // 
-            this.cmbIdContaTransf.FormattingEnabled = true;
-            this.cmbIdContaTransf.Location = new System.Drawing.Point(97, 28);
-            this.cmbIdContaTransf.Name = "cmbIdContaTransf";
-            this.cmbIdContaTransf.Size = new System.Drawing.Size(82, 21);
-            this.cmbIdContaTransf.TabIndex = 6;
-            this.cmbIdContaTransf.SelectedIndexChanged += new System.EventHandler(this.cmbIdContaTransf_SelectedIndexChanged);
             // 
             // frmContaNova
             // 

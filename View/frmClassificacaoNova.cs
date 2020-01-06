@@ -28,12 +28,23 @@ namespace Controle_Financeiro_Pessoal.View
             cmbCategoria.Items.Add(2);
         }
 
+        // verifica se todos os campos estão preenchidos
+        private bool VerificaPreenchimento()
+        {
+            // || txtFornecedor.Text == "" || txtDescricao.Text == ""
+            if (txtNomeClasse.Text == "" || cmbCategoria.Text == "")
+            {
+                return false;
+            }
+            return true;
+        }
+
         // método para salvar classe através do click no botão salvar
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             int cont = 1;
             //verifica se as caixas de texto não estão vazias
-            if (cmbCategoria.Text != "" && txtNomeClasse.Text != "")
+            if (VerificaPreenchimento())
             {
                 // não estando, seta o valor de cont a 0
                 cont -= 1;

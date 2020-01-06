@@ -87,7 +87,7 @@
             this.txtNomeClasse.Location = new System.Drawing.Point(280, 86);
             this.txtNomeClasse.Name = "txtNomeClasse";
             this.txtNomeClasse.Size = new System.Drawing.Size(342, 20);
-            this.txtNomeClasse.TabIndex = 4;
+            this.txtNomeClasse.TabIndex = 3;
             // 
             // cmbIdCategoria
             // 
@@ -95,14 +95,14 @@
             this.cmbIdCategoria.Location = new System.Drawing.Point(100, 49);
             this.cmbIdCategoria.Name = "cmbIdCategoria";
             this.cmbIdCategoria.Size = new System.Drawing.Size(82, 21);
-            this.cmbIdCategoria.TabIndex = 5;
+            this.cmbIdCategoria.TabIndex = 3;
             // 
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(348, 272);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(138, 27);
-            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -121,7 +121,7 @@
             this.txtNomeCategoria.Location = new System.Drawing.Point(280, 49);
             this.txtNomeCategoria.Name = "txtNomeCategoria";
             this.txtNomeCategoria.Size = new System.Drawing.Size(342, 20);
-            this.txtNomeCategoria.TabIndex = 4;
+            this.txtNomeCategoria.TabIndex = 3;
             // 
             // lblIdClasse
             // 
@@ -138,7 +138,7 @@
             this.cmbIdClasse.Location = new System.Drawing.Point(100, 86);
             this.cmbIdClasse.Name = "cmbIdClasse";
             this.cmbIdClasse.Size = new System.Drawing.Size(82, 21);
-            this.cmbIdClasse.TabIndex = 5;
+            this.cmbIdClasse.TabIndex = 3;
             // 
             // lblIdMovimento
             // 
@@ -155,7 +155,7 @@
             this.cmbIdMovimento.Location = new System.Drawing.Point(194, 16);
             this.cmbIdMovimento.Name = "cmbIdMovimento";
             this.cmbIdMovimento.Size = new System.Drawing.Size(82, 21);
-            this.cmbIdMovimento.TabIndex = 5;
+            this.cmbIdMovimento.TabIndex = 0;
             this.cmbIdMovimento.SelectedIndexChanged += new System.EventHandler(this.cmbIdMovimento_SelectedIndexChanged);
             // 
             // lblIdConta
@@ -181,7 +181,7 @@
             this.txtConta.Location = new System.Drawing.Point(280, 122);
             this.txtConta.Name = "txtConta";
             this.txtConta.Size = new System.Drawing.Size(342, 20);
-            this.txtConta.TabIndex = 4;
+            this.txtConta.TabIndex = 3;
             // 
             // cmbIdConta
             // 
@@ -189,14 +189,14 @@
             this.cmbIdConta.Location = new System.Drawing.Point(100, 122);
             this.cmbIdConta.Name = "cmbIdConta";
             this.cmbIdConta.Size = new System.Drawing.Size(82, 21);
-            this.cmbIdConta.TabIndex = 5;
+            this.cmbIdConta.TabIndex = 3;
             // 
             // txtValor
             // 
             this.txtValor.Location = new System.Drawing.Point(100, 161);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(210, 20);
-            this.txtValor.TabIndex = 8;
+            this.txtValor.TabIndex = 3;
             // 
             // lblValor
             // 
@@ -221,7 +221,7 @@
             this.txtData.Location = new System.Drawing.Point(412, 161);
             this.txtData.Name = "txtData";
             this.txtData.Size = new System.Drawing.Size(210, 20);
-            this.txtData.TabIndex = 8;
+            this.txtData.TabIndex = 3;
             // 
             // lblFornecedor
             // 
@@ -237,7 +237,7 @@
             this.txtFornecedor.Location = new System.Drawing.Point(100, 198);
             this.txtFornecedor.Name = "txtFornecedor";
             this.txtFornecedor.Size = new System.Drawing.Size(210, 20);
-            this.txtFornecedor.TabIndex = 8;
+            this.txtFornecedor.TabIndex = 3;
             // 
             // lblDescricao
             // 
@@ -253,7 +253,7 @@
             this.txtDescricao.Location = new System.Drawing.Point(100, 237);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(522, 20);
-            this.txtDescricao.TabIndex = 8;
+            this.txtDescricao.TabIndex = 3;
             // 
             // frmMovimentacaoExcluir
             // 

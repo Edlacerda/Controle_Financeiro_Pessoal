@@ -38,20 +38,34 @@ namespace Controle_Financeiro_Pessoal.View
         {
             foreach (var x in conta.ListaContas)
             {
-                if(Convert.ToInt32(cmbIdConta.Text) == x.Id_Conta)
+                if (Convert.ToInt32(cmbIdConta.Text) == x.Id_Conta)
                 {
                     txtNomeConta.Text = x.Conta;
                 }
             }
         }
 
+        // verifica se todos os campos estão preenchidos
+        private bool VerificaPreenchimento()
+        {
+            // || txtFornecedor.Text == "" || txtDescricao.Text == ""
+            if (cmbIdConta.Text == "" || txtNomeConta.Text == "")
+            {
+                return false;
+            }
+            return true;
+        }
+
         // método para salvar alterações do nome da conta através do click no botão salvar
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (conta.AlterarNomeConta(Convert.ToInt32(cmbIdConta.Text), txtNomeConta.Text))
+            if (VerificaPreenchimento())
             {
-                frmlistacontas.AtualizarLvwConta();
-                MessageBox.Show("Nome da Conta alterado com sucesso!");
+                if (conta.AlterarNomeConta(Convert.ToInt32(cmbIdConta.Text), txtNomeConta.Text))
+                {
+                    frmlistacontas.AtualizarLvwConta();
+                    MessageBox.Show("Nome da Conta alterado com sucesso!");
+                }
             }
             else
                 MessageBox.Show("Não foi possível alterar o nome da Conta.\n\nVerifique se todos os campos estão preenchidos corretamente");

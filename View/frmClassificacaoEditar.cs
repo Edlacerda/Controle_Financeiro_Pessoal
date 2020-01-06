@@ -74,13 +74,27 @@ namespace Controle_Financeiro_Pessoal.View
             txtNomeCategoria.Enabled = false;
         }
 
+        // verifica se todos os campos estão preenchidos
+        private bool VerificaPreenchimento()
+        {
+            // || txtFornecedor.Text == "" || txtDescricao.Text == ""
+            if (txtNomeClasse.Text == "" || cmbIdCategoria.Text == "" || cmbIdClasse.Text == "")
+            {
+                return false;
+            }
+            return true;
+        }
+
         // método para salvar alterações da classe através do click no botão salvar
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (classe.AlterarClasse(Convert.ToInt32(cmbIdClasse.Text), Convert.ToInt32(cmbIdCategoria.Text), txtNomeClasse.Text))
+            if (VerificaPreenchimento())
             {
-                frmlistaclasses.AtualizarLvwClasses();
-                MessageBox.Show("Classe alterada com sucesso!");
+                if (classe.AlterarClasse(Convert.ToInt32(cmbIdClasse.Text), Convert.ToInt32(cmbIdCategoria.Text), txtNomeClasse.Text))
+                {
+                    frmlistaclasses.AtualizarLvwClasses();
+                    MessageBox.Show("Classe alterada com sucesso!");
+                }
             }
             else
                 MessageBox.Show("Não foi possível alterar a Classe.\n\nVerifique se todos os campos estão preenchidos corretamente");

@@ -41,7 +41,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(62, 69);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(138, 27);
-            this.btnSalvar.TabIndex = 1;
+            this.btnSalvar.TabIndex = 2;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -60,14 +60,14 @@
             this.txtNomeConta.Location = new System.Drawing.Point(100, 40);
             this.txtNomeConta.Name = "txtNomeConta";
             this.txtNomeConta.Size = new System.Drawing.Size(342, 20);
-            this.txtNomeConta.TabIndex = 4;
+            this.txtNomeConta.TabIndex = 1;
             // 
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(233, 69);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(138, 27);
-            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -87,7 +87,7 @@
             this.cmbIdConta.Location = new System.Drawing.Point(100, 8);
             this.cmbIdConta.Name = "cmbIdConta";
             this.cmbIdConta.Size = new System.Drawing.Size(82, 21);
-            this.cmbIdConta.TabIndex = 5;
+            this.cmbIdConta.TabIndex = 0;
             this.cmbIdConta.SelectedIndexChanged += new System.EventHandler(this.cmbIdConta_SelectedIndexChanged);
             // 
             // frmContaEditar

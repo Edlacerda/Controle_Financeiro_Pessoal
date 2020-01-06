@@ -81,7 +81,7 @@
             this.btnEditar.Location = new System.Drawing.Point(130, 318);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(120, 22);
-            this.btnEditar.TabIndex = 1;
+            this.btnEditar.TabIndex = 2;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -91,7 +91,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(256, 318);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(120, 22);
-            this.btnExcluir.TabIndex = 1;
+            this.btnExcluir.TabIndex = 3;
             this.btnExcluir.Text = "EXCLUIR";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);

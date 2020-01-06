@@ -45,7 +45,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(62, 95);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(138, 27);
-            this.btnSalvar.TabIndex = 1;
+            this.btnSalvar.TabIndex = 4;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -73,7 +73,7 @@
             this.txtNomeClasse.Location = new System.Drawing.Point(99, 69);
             this.txtNomeClasse.Name = "txtNomeClasse";
             this.txtNomeClasse.Size = new System.Drawing.Size(342, 20);
-            this.txtNomeClasse.TabIndex = 4;
+            this.txtNomeClasse.TabIndex = 3;
             // 
             // cmbIdCategoria
             // 
@@ -81,7 +81,7 @@
             this.cmbIdCategoria.Location = new System.Drawing.Point(99, 7);
             this.cmbIdCategoria.Name = "cmbIdCategoria";
             this.cmbIdCategoria.Size = new System.Drawing.Size(82, 21);
-            this.cmbIdCategoria.TabIndex = 5;
+            this.cmbIdCategoria.TabIndex = 0;
             this.cmbIdCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbIdCategoria_SelectedIndexChanged);
             // 
             // btnCancelar
@@ -89,7 +89,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(233, 95);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(138, 27);
-            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -108,7 +108,7 @@
             this.txtNomeCategoria.Location = new System.Drawing.Point(273, 7);
             this.txtNomeCategoria.Name = "txtNomeCategoria";
             this.txtNomeCategoria.Size = new System.Drawing.Size(168, 20);
-            this.txtNomeCategoria.TabIndex = 4;
+            this.txtNomeCategoria.TabIndex = 1;
             // 
             // lblIdClasse
             // 
@@ -125,7 +125,7 @@
             this.cmbIdClasse.Location = new System.Drawing.Point(99, 37);
             this.cmbIdClasse.Name = "cmbIdClasse";
             this.cmbIdClasse.Size = new System.Drawing.Size(82, 21);
-            this.cmbIdClasse.TabIndex = 5;
+            this.cmbIdClasse.TabIndex = 2;
             this.cmbIdClasse.SelectedIndexChanged += new System.EventHandler(this.cmbIdClasse_SelectedIndexChanged);
             // 
             // frmClassificacaoEditar

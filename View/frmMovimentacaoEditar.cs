@@ -159,17 +159,31 @@ namespace Controle_Financeiro_Pessoal.View
             txtConta.Enabled = false;
         }
 
+        // verifica se todos os campos estão preenchidos
+        private bool VerificaPreenchimento()
+        {
+            // || txtFornecedor.Text == "" || txtDescricao.Text == ""
+            if (cmbIdCategoria.Text == "" || cmbIdClasse.Text == "" || cmbIdConta.Text == "" || txtValor.Text == "" || txtData.Text == "")
+            {
+                return false;
+            }
+            return true;
+        }
+
         // método para editar movimentacão através do click no botão salvar
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (movimento.AlterarMoviventacao(Convert.ToInt32(cmbIdMovimento.Text), Convert.ToInt32(cmbIdCategoria.Text), Convert.ToInt32(cmbIdClasse.Text), Convert.ToInt32(cmbIdConta.Text), Convert.ToDouble(txtValor.Text), Convert.ToDateTime(txtData.Text), txtFornecedor.Text, txtDescricao.Text))
+            if (VerificaPreenchimento())
             {
-                frmlistamovimentos.AtualizarLvwmMovimentacoes();
-                MessageBox.Show("Nome da Conta alterado com sucesso!");
+                if (movimento.AlterarMoviventacao(Convert.ToInt32(cmbIdMovimento.Text), Convert.ToInt32(cmbIdCategoria.Text), Convert.ToInt32(cmbIdClasse.Text), Convert.ToInt32(cmbIdConta.Text), Convert.ToDouble(txtValor.Text), Convert.ToDateTime(txtData.Text), txtFornecedor.Text, txtDescricao.Text))
+                {
+                    frmlistamovimentos.AtualizarLvwmMovimentacoes();
+                    // toda vez que clicar em salvar, fecha o form
+                    MessageBox.Show("Nome da Conta alterado com sucesso!");
+                }
             }
             else
                 MessageBox.Show("Não foi possível alterar o nome da Conta.\n\nVerifique se todos os campos estão preenchidos corretamente");
-            // toda vez que clicar em salvar, fecha o form
             this.Close();
         }
 

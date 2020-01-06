@@ -106,16 +106,29 @@ namespace Controle_Financeiro_Pessoal.View
         // método para editar movimentacão através do click no botão salvar
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-
-            if (novoMovimento.InserirMovimento(Convert.ToInt32(cmbIdCategoria.Text), Convert.ToInt32(cmbIdClasse.Text), Convert.ToInt32(cmbIdConta.Text), Convert.ToDouble(txtValor.Text), Convert.ToDateTime(txtData.Text), txtFornecedor.Text, txtDescricao.Text))
+            if (VerificaPreenchimento())
             {
-                frmlistamovimentos.AtualizarLvwmMovimentacoes();
-                MessageBox.Show("Movimentação inserida com sucesso!");
-                this.Close();
+                if (novoMovimento.InserirMovimento(Convert.ToInt32(cmbIdCategoria.Text), Convert.ToInt32(cmbIdClasse.Text), Convert.ToInt32(cmbIdConta.Text), Convert.ToDouble(txtValor.Text), Convert.ToDateTime(txtData.Text), txtFornecedor.Text, txtDescricao.Text))
+                {
+                    frmlistamovimentos.AtualizarLvwmMovimentacoes();
+                    MessageBox.Show("Movimentação inserida com sucesso!");
+                    // toda vez que clicar em salvar, fecha o form
+                    this.Close();
+                }
             }
             else
                 MessageBox.Show("Não foi possível inserir a movimentação.\n\nVerifique se todos os campos estão preenchidos corretamente");
-            // toda vez que clicar em salvar, fecha o form
+        }
+
+        // verifica se todos os campos estão preenchidos
+        private bool VerificaPreenchimento()
+        {
+            // || txtFornecedor.Text == "" || txtDescricao.Text == ""
+            if (cmbIdCategoria.Text == "" || cmbIdClasse.Text == "" || cmbIdConta.Text == "" || txtValor.Text == "" || txtData.Text == "")
+            {
+                return false;
+            }
+            return true;
         }
 
         // botão cancelar fecha o form

@@ -43,7 +43,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(63, 61);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(138, 27);
-            this.btnSalvar.TabIndex = 1;
+            this.btnSalvar.TabIndex = 3;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -71,7 +71,7 @@
             this.txtNomeClasse.Location = new System.Drawing.Point(101, 6);
             this.txtNomeClasse.Name = "txtNomeClasse";
             this.txtNomeClasse.Size = new System.Drawing.Size(342, 20);
-            this.txtNomeClasse.TabIndex = 4;
+            this.txtNomeClasse.TabIndex = 0;
             // 
             // cmbCategoria
             // 
@@ -79,7 +79,7 @@
             this.cmbCategoria.Location = new System.Drawing.Point(101, 34);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(82, 21);
-            this.cmbCategoria.TabIndex = 5;
+            this.cmbCategoria.TabIndex = 1;
             this.cmbCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbCategoria_SelectedIndexChanged);
             // 
             // btnCancelar
@@ -87,7 +87,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(234, 61);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(138, 27);
-            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -106,7 +106,7 @@
             this.txtNomeCategoria.Location = new System.Drawing.Point(275, 34);
             this.txtNomeCategoria.Name = "txtNomeCategoria";
             this.txtNomeCategoria.Size = new System.Drawing.Size(168, 20);
-            this.txtNomeCategoria.TabIndex = 4;
+            this.txtNomeCategoria.TabIndex = 2;
             // 
             // frmClassificacaoNova
             // 

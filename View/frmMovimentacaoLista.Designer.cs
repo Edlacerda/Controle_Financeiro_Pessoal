@@ -47,7 +47,7 @@
             this.btnNovoMovimento.Location = new System.Drawing.Point(342, 463);
             this.btnNovoMovimento.Name = "btnNovoMovimento";
             this.btnNovoMovimento.Size = new System.Drawing.Size(151, 22);
-            this.btnNovoMovimento.TabIndex = 1;
+            this.btnNovoMovimento.TabIndex = 0;
             this.btnNovoMovimento.Text = "NOVO";
             this.btnNovoMovimento.UseVisualStyleBackColor = true;
             this.btnNovoMovimento.Click += new System.EventHandler(this.btnNovoMovimento_Click);
@@ -67,7 +67,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(680, 463);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(151, 22);
-            this.btnExcluir.TabIndex = 1;
+            this.btnExcluir.TabIndex = 2;
             this.btnExcluir.Text = "EXCLUIR";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);

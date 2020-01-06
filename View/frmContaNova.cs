@@ -66,7 +66,24 @@ namespace Controle_Financeiro_Pessoal.View
         // método para salvar classe através do click no botão salvar
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            if (VerificaPreenchimento())
+            {
+            }
+        }
 
+        // verifica se todos os campos estão preenchidos
+        private bool VerificaPreenchimento()
+        {
+            // || txtFornecedor.Text == "" || txtDescricao.Text == ""
+            if (txtNomeConta.Text == "" || txtSaldoInicial.Text == "")
+            {
+                return false;
+            }
+            if (chkTransferencia.Checked && (cmbIdContaTransf.Text == "" || txtSaldoAtualTransf.Text == "" || txtNomeContaTransf.Text == ""))
+            {
+                return false;
+            }
+            return true;
         }
 
         // botão cancelar fecha o form

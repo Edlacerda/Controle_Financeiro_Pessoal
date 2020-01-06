@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Controle_Financeiro_Pessoal.Model;
 using System.Data.SqlClient;
 using System.Data;
+using System.Globalization;
 
 namespace Controle_Financeiro_Pessoal.Controller
 {
@@ -57,7 +58,7 @@ namespace Controle_Financeiro_Pessoal.Controller
         public bool AlterarSaldo(int id_Conta, double saldo)
         {
             //colocar verificação de se existir movimentações dentro da conta
-            DBContas.cmd = new SqlCommand("UPDATE Conta SET Saldo = '" + saldo + "' WHERE IdConta = " + id_Conta, DBContas.sqlConn);
+            DBContas.cmd = new SqlCommand("UPDATE Conta SET Saldo = '" + saldo.ToString("F2", CultureInfo.InvariantCulture) + "' WHERE IdConta = " + id_Conta, DBContas.sqlConn);
             if (conexão(DBContas.cmd))
                 return true;
             return false;
