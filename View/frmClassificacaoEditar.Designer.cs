@@ -53,7 +53,7 @@
             // lblNomeClasse
             // 
             this.lblNomeClasse.AutoSize = true;
-            this.lblNomeClasse.Location = new System.Drawing.Point(11, 43);
+            this.lblNomeClasse.Location = new System.Drawing.Point(10, 72);
             this.lblNomeClasse.Name = "lblNomeClasse";
             this.lblNomeClasse.Size = new System.Drawing.Size(83, 13);
             this.lblNomeClasse.TabIndex = 2;
@@ -62,7 +62,7 @@
             // lblIDCategoria
             // 
             this.lblIDCategoria.AutoSize = true;
-            this.lblIDCategoria.Location = new System.Drawing.Point(11, 75);
+            this.lblIDCategoria.Location = new System.Drawing.Point(10, 14);
             this.lblIDCategoria.Name = "lblIDCategoria";
             this.lblIDCategoria.Size = new System.Drawing.Size(83, 13);
             this.lblIDCategoria.TabIndex = 2;
@@ -70,7 +70,7 @@
             // 
             // txtNomeClasse
             // 
-            this.txtNomeClasse.Location = new System.Drawing.Point(100, 40);
+            this.txtNomeClasse.Location = new System.Drawing.Point(99, 69);
             this.txtNomeClasse.Name = "txtNomeClasse";
             this.txtNomeClasse.Size = new System.Drawing.Size(342, 20);
             this.txtNomeClasse.TabIndex = 4;
@@ -78,7 +78,7 @@
             // cmbIdCategoria
             // 
             this.cmbIdCategoria.FormattingEnabled = true;
-            this.cmbIdCategoria.Location = new System.Drawing.Point(100, 68);
+            this.cmbIdCategoria.Location = new System.Drawing.Point(99, 7);
             this.cmbIdCategoria.Name = "cmbIdCategoria";
             this.cmbIdCategoria.Size = new System.Drawing.Size(82, 21);
             this.cmbIdCategoria.TabIndex = 5;
@@ -97,7 +97,7 @@
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(199, 73);
+            this.lblCategoria.Location = new System.Drawing.Point(198, 12);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(69, 13);
             this.lblCategoria.TabIndex = 2;
@@ -105,7 +105,7 @@
             // 
             // txtNomeCategoria
             // 
-            this.txtNomeCategoria.Location = new System.Drawing.Point(274, 68);
+            this.txtNomeCategoria.Location = new System.Drawing.Point(273, 7);
             this.txtNomeCategoria.Name = "txtNomeCategoria";
             this.txtNomeCategoria.Size = new System.Drawing.Size(168, 20);
             this.txtNomeCategoria.TabIndex = 4;
@@ -113,7 +113,7 @@
             // lblIdClasse
             // 
             this.lblIdClasse.AutoSize = true;
-            this.lblIdClasse.Location = new System.Drawing.Point(11, 15);
+            this.lblIdClasse.Location = new System.Drawing.Point(10, 44);
             this.lblIdClasse.Name = "lblIdClasse";
             this.lblIdClasse.Size = new System.Drawing.Size(62, 13);
             this.lblIdClasse.TabIndex = 2;
@@ -122,7 +122,7 @@
             // cmbIdClasse
             // 
             this.cmbIdClasse.FormattingEnabled = true;
-            this.cmbIdClasse.Location = new System.Drawing.Point(100, 8);
+            this.cmbIdClasse.Location = new System.Drawing.Point(99, 37);
             this.cmbIdClasse.Name = "cmbIdClasse";
             this.cmbIdClasse.Size = new System.Drawing.Size(82, 21);
             this.cmbIdClasse.TabIndex = 5;
@@ -132,7 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 134);
+            this.ClientSize = new System.Drawing.Size(453, 129);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.cmbIdClasse);
             this.Controls.Add(this.cmbIdCategoria);

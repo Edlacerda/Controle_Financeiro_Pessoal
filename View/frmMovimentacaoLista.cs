@@ -52,6 +52,8 @@ namespace Controle_Financeiro_Pessoal.View
 
         private void btnNovoMovimento_Click(object sender, EventArgs e)
         {
+            frmMovimentacaoNova x = new frmMovimentacaoNova(this);
+            x.Show();
         }
 
 

@@ -19,11 +19,12 @@ namespace Controle_Financeiro_Pessoal.Controller
             ListaMovimentacoes = AcessoDB.LerMovimentacoes();
         }
 
-        public bool InserirConta(Movimentos novoMovimento)
+        public bool InserirMovimento(int idCategoria, int idClasse, int idConta, double valor, DateTime data, string fornecedor, string descricao)
         {
-            if (AcessoDB.GravarMovimentacao(novoMovimento.Id_Categoria, novoMovimento.Id_Classe, novoMovimento.Id_Conta, novoMovimento.Valor, novoMovimento.Data, novoMovimento.Fornecedor, novoMovimento.Descricao))
+
+            if (AcessoDB.GravarMovimentacao(idCategoria, idClasse, idConta, valor, data, fornecedor, descricao))
             {
-                ListaMovimentacoes.Add(novoMovimento);
+                //ListaMovimentacoes.Add(novoMovimento);
                 return true;
             }
             return false;

@@ -58,6 +58,12 @@
     <Compile Include="Model\Contas.cs" />
     <Compile Include="Model\Data.cs" />
     <Compile Include="Model\Movimentos.cs" />
+    <Compile Include="View\frmMovimentacaoNova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmMovimentacaoNova.Designer.cs">
+      <DependentUpon>frmMovimentacaoNova.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmMovimentacaoEditar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,12 +144,6 @@
     <Compile Include="View\frmFluxoDeCaixa.Designer.cs">
       <DependentUpon>frmFluxoDeCaixa.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmMovimentacaoNova.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmMovimentacaoNova.Designer.cs">
-      <DependentUpon>frmMovimentacaoNova.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -153,6 +153,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmMovimentacaoNova.resx">
+      <DependentUpon>frmMovimentacaoNova.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmMovimentacaoEditar.resx">
       <DependentUpon>frmMovimentacaoEditar.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,9 +194,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmFluxoDeCaixa.resx">
       <DependentUpon>frmFluxoDeCaixa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\frmMovimentacaoNova.resx">
-      <DependentUpon>frmMovimentacaoNova.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
