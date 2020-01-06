@@ -21,6 +21,8 @@ namespace Controle_Financeiro_Pessoal.View
             movimento = new Movimentacoes();
             conta = new NConta();
             PreencherCmbIdMovimentacao();
+            PreencherCmbIdCategoria();
+            PreencherCmbIdConta();
 
             cmbIdCategoria.Enabled = false;
             txtNomeCategoria.Enabled = false;
@@ -47,7 +49,6 @@ namespace Controle_Financeiro_Pessoal.View
         private void cmbIdMovimento_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmbIdCategoria.Enabled = true;
-            txtNomeCategoria.Enabled = true;
             cmbIdClasse.Enabled = true;
             cmbIdConta.Enabled = true;
             txtValor.Enabled = true;
@@ -66,11 +67,38 @@ namespace Controle_Financeiro_Pessoal.View
                     cmbIdConta.Text = x.Id_Conta.ToString();
                     cmbIdConta_SelectedIndexChanged();
                     txtValor.Text = x.Valor.ToString("0.00");
-                    txtData.Text = x.Data.ToString("dd/mm/yyyy");
+                    txtData.Text = x.Data.ToString("dd/MM/yyyy");
                     txtFornecedor.Text = x.Fornecedor;
                     txtDescricao.Text = x.Descricao;
                     break;
                 }
+            }
+            txtValor.Enabled = false;
+        }
+
+        //preenchendo categorias do 1 = ENTRADAS, 2 = SAÍDAS
+        private void PreencherCmbIdCategoria()
+        {
+            cmbIdCategoria.Items.Add(1);
+            cmbIdCategoria.Items.Add(2);
+        }
+
+        //preenchendo combobox das classes de acordo com a categoria indicada
+        private void PreencherCmbIdClasse()
+        {
+            foreach (var x in classe.ListaClasses)
+            {
+                if (cmbIdCategoria.Text == x.Id_Categoria.ToString())
+                    cmbIdClasse.Items.Add(x.IdClasse);
+            }
+        }
+
+        //preenchendo combobox das contas
+        private void PreencherCmbIdConta()
+        {
+            foreach (var x in conta.ListaContas)
+            {
+                cmbIdConta.Items.Add(x.Id_Conta);
             }
         }
 
@@ -98,7 +126,16 @@ namespace Controle_Financeiro_Pessoal.View
         // preenche o nome da Categoria quando muda o combobox de id da Categoria
         private void cmbIdCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
-            categoria.NomeCategoria(Convert.ToInt32(cmbIdCategoria));
+            txtNomeCategoria.Enabled = true;
+
+            txtNomeCategoria.Text = categoria.NomeCategoria(Convert.ToInt32(cmbIdCategoria.Text));
+            cmbIdClasse.Items.Clear();
+            cmbIdClasse.Text = "";
+            txtNomeClasse.Text = "";
+            PreencherCmbIdClasse();
+            cmbIdClasse.Enabled = true;
+
+            txtNomeCategoria.Enabled = false;
         }
 
         // preenche o nome da Conta quando muda o combobox de id da Conta

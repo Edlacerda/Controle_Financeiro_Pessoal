@@ -66,7 +66,7 @@ namespace Controle_Financeiro_Pessoal.View
                     cmbIdConta.Text = x.Id_Conta.ToString();
                     cmbIdConta_SelectedIndexChanged();
                     txtValor.Text = x.Valor.ToString("C");
-                    txtData.Text = x.Data.ToString("dd/mm/yyyy");
+                    txtData.Text = x.Data.ToString("dd/MM/yyyy");
                     txtFornecedor.Text = x.Fornecedor;
                     txtDescricao.Text = x.Descricao;
                     break;
@@ -128,7 +128,7 @@ namespace Controle_Financeiro_Pessoal.View
                 this.Close();
             }
             else
-                MessageBox.Show("Não foi possível alterar a Movimento.");
+                MessageBox.Show("Não foi possível excluir o Movimento.");
         }
 
         // botão cancelar fecha o form

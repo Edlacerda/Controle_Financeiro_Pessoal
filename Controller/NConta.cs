@@ -30,6 +30,38 @@ namespace Controle_Financeiro_Pessoal.Controller
             return false;
         }
 
+        private Contas AcessarConta(int idConta)
+        {
+            foreach (var x in AcessoDB.LerContas())
+            {
+                if (x.Id_Conta == idConta)
+                {
+                    return x;
+                }
+            }
+            return null;
+        }
+
+        //
+        public bool AlterarSaldo(int idCategoria, int idConta, double valor)
+        {
+            Conta = AcessarConta(idConta);
+
+            if (idCategoria == 2)
+            {
+                if (Conta.Saldo < valor)
+                    return false;
+                Conta.Saldo -= valor;
+            }
+            else
+            {
+                Conta.Saldo += valor;
+            }
+            if (!AcessoDB.AlterarSaldo(idConta, Conta.Saldo))
+                return false;
+            return true;
+        }
+
         // para excluir conta é necessário primeiro ver se não tem movimentos com a conta selecionada e se consegue excluir do DB
         public bool ExcluirConta(int IdConta)
         {
@@ -51,11 +83,11 @@ namespace Controle_Financeiro_Pessoal.Controller
         }
 
         // para alterar conta também é necessário ver se não tem movimentos com a conta selecionada e se consegue alterar no DB
-        public bool AlterarConta(int IdConta, string Conta)
+        public bool AlterarNomeConta(int IdConta, string Conta)
         {
             if (!VerificaContaNosMovimentos(IdConta))
             {
-                if (AcessoDB.AlterarConta(IdConta, Conta))
+                if (AcessoDB.AlterarNomeConta(IdConta, Conta))
                 {
                     foreach (Contas x in ListaContas)
                     {

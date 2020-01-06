@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using Controle_Financeiro_Pessoal.Model;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Controle_Financeiro_Pessoal.Controller
 {
     class Movimentacoes
     {
         public Movimentos movimento { get; set; }
+        public NConta novaConta { get; set; }
         public List<Movimentos> ListaMovimentacoes { get; set; }
         public Movimentacoes_DAO AcessoDB;
 
@@ -21,11 +19,13 @@ namespace Controle_Financeiro_Pessoal.Controller
 
         public bool InserirMovimento(int idCategoria, int idClasse, int idConta, double valor, DateTime data, string fornecedor, string descricao)
         {
-
-            if (AcessoDB.GravarMovimentacao(idCategoria, idClasse, idConta, valor, data, fornecedor, descricao))
+            novaConta = new NConta();
+            if (novaConta.AlterarSaldo(idCategoria, idConta, valor))
             {
-                //ListaMovimentacoes.Add(novoMovimento);
-                return true;
+                if (AcessoDB.GravarMovimentacao(idCategoria, idClasse, idConta, valor, data, fornecedor, descricao))
+                {
+                    return true;
+                }
             }
             return false;
         }
@@ -33,15 +33,25 @@ namespace Controle_Financeiro_Pessoal.Controller
         // Exclui movimento caso consiga excluir do DB
         public bool ExcluirMovimentacao(int IdMovimentação)
         {
-            if (AcessoDB.DeletarMovimentacao(IdMovimentação))
+            novaConta = new NConta();
+            foreach (Movimentos x in ListaMovimentacoes)
             {
-                foreach (Movimentos x in ListaMovimentacoes)
+                if (x.Id_Movimento == IdMovimentação)
                 {
-                    if (x.Id_Movimento == IdMovimentação)
+                    int idcateg;
+                    if (x.Id_Categoria == 1)
+                        idcateg = 2;
+                    else
+                        idcateg = 1;
+                    if (novaConta.AlterarSaldo(idcateg, x.Id_Conta, x.Valor))
                     {
-                        ListaMovimentacoes.Remove(x);
-                        return true;
+                        if (AcessoDB.DeletarMovimentacao(IdMovimentação))
+                        {
+                            ListaMovimentacoes.Remove(x);
+                            return true;
+                        }
                     }
+
                 }
             }
             return false;

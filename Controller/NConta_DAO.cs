@@ -43,11 +43,21 @@ namespace Controle_Financeiro_Pessoal.Controller
             return false;
         }
 
-        // Método de alteração, necessário informar todos os parâmetros, considerando que não se sabe qual será alterado
-        public bool AlterarConta(int id_Conta, string conta)
+        // Método de alteração do nome da conta
+        public bool AlterarNomeConta(int id_Conta, string conta)
         {
             //colocar verificação de se existir movimentações dentro da conta
             DBContas.cmd = new SqlCommand("UPDATE Conta SET Conta = '" + conta + "' WHERE IdConta = " + id_Conta, DBContas.sqlConn);
+            if (conexão(DBContas.cmd))
+                return true;
+            return false;
+        }
+
+        // Método de alteração do saldo da conta
+        public bool AlterarSaldo(int id_Conta, double saldo)
+        {
+            //colocar verificação de se existir movimentações dentro da conta
+            DBContas.cmd = new SqlCommand("UPDATE Conta SET Saldo = '" + saldo + "' WHERE IdConta = " + id_Conta, DBContas.sqlConn);
             if (conexão(DBContas.cmd))
                 return true;
             return false;

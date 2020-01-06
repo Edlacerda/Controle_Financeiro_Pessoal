@@ -48,7 +48,7 @@ namespace Controle_Financeiro_Pessoal.View
         // método para salvar alterações do nome da conta através do click no botão salvar
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (conta.AlterarConta(Convert.ToInt32(cmbIdConta.Text), txtNomeConta.Text))
+            if (conta.AlterarNomeConta(Convert.ToInt32(cmbIdConta.Text), txtNomeConta.Text))
             {
                 frmlistacontas.AtualizarLvwConta();
                 MessageBox.Show("Nome da Conta alterado com sucesso!");

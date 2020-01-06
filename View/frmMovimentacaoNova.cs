@@ -22,6 +22,7 @@ namespace Controle_Financeiro_Pessoal.View
             novoMovimento = new Movimentacoes();
             PreencherCmbIdCategoria();
             PreencherCmbIdConta();
+            txtData.Text = DateTime.Today.ToString("dd/MM/yyyy");
             txtNomeCategoria.Enabled = false;
             txtNomeClasse.Enabled = false;
             cmbIdClasse.Enabled = false;
@@ -44,7 +45,7 @@ namespace Controle_Financeiro_Pessoal.View
                     cmbIdClasse.Items.Add(x.IdClasse);
             }
         }
-       
+
         //preenchendo combobox das contas
         private void PreencherCmbIdConta()
         {
@@ -110,11 +111,11 @@ namespace Controle_Financeiro_Pessoal.View
             {
                 frmlistamovimentos.AtualizarLvwmMovimentacoes();
                 MessageBox.Show("Movimentação inserida com sucesso!");
+                this.Close();
             }
             else
                 MessageBox.Show("Não foi possível inserir a movimentação.\n\nVerifique se todos os campos estão preenchidos corretamente");
             // toda vez que clicar em salvar, fecha o form
-            this.Close();
         }
 
         // botão cancelar fecha o form
