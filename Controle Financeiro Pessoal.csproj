@@ -64,6 +64,12 @@
     <Compile Include="View\Movimentacao\frmMovimentacaoNova.Designer.cs">
       <DependentUpon>frmMovimentacaoNova.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Conta\frmContaTransferencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Conta\frmContaTransferencia.Designer.cs">
+      <DependentUpon>frmContaTransferencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Movimentacao\frmMovimentacaoEditar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </Compile>
     <EmbeddedResource Include="View\Movimentacao\frmMovimentacaoNova.resx">
       <DependentUpon>frmMovimentacaoNova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Conta\frmContaTransferencia.resx">
+      <DependentUpon>frmContaTransferencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Movimentacao\frmMovimentacaoEditar.resx">
       <DependentUpon>frmMovimentacaoEditar.cs</DependentUpon>

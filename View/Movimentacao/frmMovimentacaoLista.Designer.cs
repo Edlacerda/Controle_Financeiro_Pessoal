@@ -44,30 +44,30 @@
             // 
             // btnNovoMovimento
             // 
-            this.btnNovoMovimento.Location = new System.Drawing.Point(342, 463);
+            this.btnNovoMovimento.Location = new System.Drawing.Point(273, 463);
             this.btnNovoMovimento.Name = "btnNovoMovimento";
             this.btnNovoMovimento.Size = new System.Drawing.Size(151, 22);
-            this.btnNovoMovimento.TabIndex = 0;
+            this.btnNovoMovimento.TabIndex = 1;
             this.btnNovoMovimento.Text = "NOVO";
             this.btnNovoMovimento.UseVisualStyleBackColor = true;
             this.btnNovoMovimento.Click += new System.EventHandler(this.btnNovoMovimento_Click);
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(511, 463);
+            this.btnEditar.Location = new System.Drawing.Point(459, 463);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(151, 22);
-            this.btnEditar.TabIndex = 1;
+            this.btnEditar.TabIndex = 3;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(680, 463);
+            this.btnExcluir.Location = new System.Drawing.Point(640, 463);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(151, 22);
-            this.btnExcluir.TabIndex = 2;
+            this.btnExcluir.TabIndex = 4;
             this.btnExcluir.Text = "EXCLUIR";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);

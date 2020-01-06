@@ -40,6 +40,14 @@ VALUES (1, 'NOVA CONTA')
 
 INSERT INTO Classe
 (Id_Categoria, Classe)
+VALUES (1, 'TRANSFERENCIA')
+
+INSERT INTO Classe
+(Id_Categoria, Classe)
+VALUES (2, 'TRANSFERENCIA')
+
+INSERT INTO Classe
+(Id_Categoria, Classe)
 VALUES (1, 'REMUNERAÇÃO')
 
 INSERT INTO Classe
@@ -53,10 +61,6 @@ VALUES (1, 'RENDIMENTO')
 INSERT INTO Classe
 (Id_Categoria, Classe)
 VALUES (1, 'OUTRO')
-
-INSERT INTO Classe
-(Id_Categoria, Classe)
-VALUES (2, 'TRANSFERENCIA')
 
 INSERT INTO Classe
 (Id_Categoria, Classe)

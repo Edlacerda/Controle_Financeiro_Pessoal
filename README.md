@@ -11,11 +11,14 @@ O banco de dados será feito em SQL Server (local), já com a adição de alguma
 
 Categoria - Entrada e Saída
 
-Classe - Investimentos, Remuneração, Rendimentos e Outros (Entrada)
-         Alimentação, Aquisições, Banco, Comodidades, Doações, Educação, Habitação, Investimentos, Lazer, Presentes, Transporte e  Outros (Saída)
+Classe - Remuneração, Transferência, Investimentos, Rendimentos e Outros (Entrada)
+         Transferência, Alimentação, Aquisições, Banco, Comodidades, Doações, Educação, Habitação, Investimentos, Lazer, Presentes, Transporte e  Outros (Saída)
+
+Conta - Dinheiro
 
 O programa permitirá que o usuário:
-Inclua/Exclua Classificações financeiras;
+Inclua/Exclua/Edite Classificações financeiras;
+Inclua/Exclua/Edite Contas financeiras;
 Inclua/Exclua/Edite movimentações financeiras;
 Visualize um fluxo de caixa conforme classificações;
-Visualize, em uma curva ABC (maior para menor), os maiores valores de entrada e saída.
+Visualize o saldo das contas e o total disponível.

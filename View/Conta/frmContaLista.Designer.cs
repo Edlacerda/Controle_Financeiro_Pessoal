@@ -35,6 +35,7 @@
             this.btnNovaConta = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnTransferencia = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lvwContas
@@ -70,7 +71,7 @@
             // 
             this.btnNovaConta.Location = new System.Drawing.Point(4, 318);
             this.btnNovaConta.Name = "btnNovaConta";
-            this.btnNovaConta.Size = new System.Drawing.Size(120, 22);
+            this.btnNovaConta.Size = new System.Drawing.Size(80, 22);
             this.btnNovaConta.TabIndex = 1;
             this.btnNovaConta.Text = "NOVA";
             this.btnNovaConta.UseVisualStyleBackColor = true;
@@ -78,23 +79,33 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(130, 318);
+            this.btnEditar.Location = new System.Drawing.Point(204, 318);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(120, 22);
-            this.btnEditar.TabIndex = 2;
+            this.btnEditar.Size = new System.Drawing.Size(80, 22);
+            this.btnEditar.TabIndex = 3;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(256, 318);
+            this.btnExcluir.Location = new System.Drawing.Point(290, 318);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(120, 22);
-            this.btnExcluir.TabIndex = 3;
+            this.btnExcluir.Size = new System.Drawing.Size(80, 22);
+            this.btnExcluir.TabIndex = 4;
             this.btnExcluir.Text = "EXCLUIR";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnTransferencia
+            // 
+            this.btnTransferencia.Location = new System.Drawing.Point(90, 318);
+            this.btnTransferencia.Name = "btnTransferencia";
+            this.btnTransferencia.Size = new System.Drawing.Size(108, 22);
+            this.btnTransferencia.TabIndex = 2;
+            this.btnTransferencia.Text = "TRANSFERÊNCIA";
+            this.btnTransferencia.UseVisualStyleBackColor = true;
+            this.btnTransferencia.Click += new System.EventHandler(this.btnTransferencia_Click);
             // 
             // frmContaLista
             // 
@@ -103,6 +114,7 @@
             this.ClientSize = new System.Drawing.Size(382, 345);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnTransferencia);
             this.Controls.Add(this.btnNovaConta);
             this.Controls.Add(this.lvwContas);
             this.Name = "frmContaLista";
@@ -121,5 +133,6 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.ColumnHeader column_Saldo;
+        private System.Windows.Forms.Button btnTransferencia;
     }
 }

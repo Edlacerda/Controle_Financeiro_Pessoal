@@ -45,6 +45,12 @@ namespace Controle_Financeiro_Pessoal.View
             x.Show();
         }
 
+        private void btnTransferencia_Click(object sender, EventArgs e)
+        {
+            frmContaTransferencia x = new frmContaTransferencia(this);
+            x.Show();
+        }
+
         private void btnEditar_Click(object sender, EventArgs e)
         {
             frmContaEditar x = new frmContaEditar(this);
