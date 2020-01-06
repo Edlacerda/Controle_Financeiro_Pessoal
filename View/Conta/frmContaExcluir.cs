@@ -33,9 +33,6 @@ namespace Controle_Financeiro_Pessoal.View
         // preencher nome e saldo das contas de transferência
         private void cmbIdConta_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtSaldoAtual.Enabled = true;
-            txtNomeConta.Enabled = true;
-
             foreach (var x in Conta.ListaContas)
             {
                 if (cmbIdConta.Text == x.Id_Conta.ToString())
@@ -44,11 +41,9 @@ namespace Controle_Financeiro_Pessoal.View
                     txtNomeConta.Text = x.Conta;
                 }
             }
-            txtSaldoAtual.Enabled = false;
-            txtNomeConta.Enabled = false;
         }
 
-        // método para exlcluir clonta através do click no botão Excluir
+        // método para excluir conta através do click no botão Excluir
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             if (Convert.ToDecimal(txtSaldoAtual.Text) > 0)

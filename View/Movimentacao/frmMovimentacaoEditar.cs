@@ -4,7 +4,7 @@ using Controle_Financeiro_Pessoal.Controller;
 
 namespace Controle_Financeiro_Pessoal.View
 {
-    public partial class frmMovimentacaoExcluir : Form
+    public partial class frmMovimentacaoEditar : Form
     {
         frmMovimentacaoLista frmlistamovimentos;
         Classificacoes classe;
@@ -12,7 +12,7 @@ namespace Controle_Financeiro_Pessoal.View
         Movimentacoes movimento;
         NConta conta;
 
-        public frmMovimentacaoExcluir(frmMovimentacaoLista F)
+        public frmMovimentacaoEditar(frmMovimentacaoLista F)
         {
             InitializeComponent();
             frmlistamovimentos = F;
@@ -21,6 +21,8 @@ namespace Controle_Financeiro_Pessoal.View
             movimento = new Movimentacoes();
             conta = new NConta();
             PreencherCmbIdMovimentacao();
+            PreencherCmbIdCategoria();
+            PreencherCmbIdConta();
 
             cmbIdCategoria.Enabled = false;
             txtNomeCategoria.Enabled = false;
@@ -47,10 +49,8 @@ namespace Controle_Financeiro_Pessoal.View
         private void cmbIdMovimento_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmbIdCategoria.Enabled = true;
-            txtNomeCategoria.Enabled = true;
             cmbIdClasse.Enabled = true;
             cmbIdConta.Enabled = true;
-            txtValor.Enabled = true;
             txtData.Enabled = true;
             txtFornecedor.Enabled = true;
             txtDescricao.Enabled = true;
@@ -65,29 +65,48 @@ namespace Controle_Financeiro_Pessoal.View
                     cmbIdClasse_SelectedIndexChanged();
                     cmbIdConta.Text = x.Id_Conta.ToString();
                     cmbIdConta_SelectedIndexChanged();
-                    txtValor.Text = x.Valor.ToString("C");
+                    txtValor.Text = x.Valor.ToString("0.00");
                     txtData.Text = x.Data.ToString("dd/MM/yyyy");
                     txtFornecedor.Text = x.Fornecedor;
                     txtDescricao.Text = x.Descricao;
                     break;
                 }
             }
+        }
 
-            cmbIdCategoria.Enabled = false;
-            txtNomeCategoria.Enabled = false;
-            cmbIdClasse.Enabled = false;
-            cmbIdConta.Enabled = false;
-            txtValor.Enabled = false;
-            txtData.Enabled = false;
-            txtFornecedor.Enabled = false;
-            txtDescricao.Enabled = false;
+        //preenchendo categorias do 1 = ENTRADAS, 2 = SAÍDAS
+        private void PreencherCmbIdCategoria()
+        {
+            cmbIdCategoria.Items.Add(1);
+            cmbIdCategoria.Items.Add(2);
+        }
+
+        //preenchendo combobox das classes de acordo com a categoria indicada
+        private void PreencherCmbIdClasse()
+        {
+            foreach (var x in classe.ListaClasses)
+            {
+                if (cmbIdCategoria.Text == x.Id_Categoria.ToString())
+                    cmbIdClasse.Items.Add(x.IdClasse);
+            }
+        }
+
+        //preenchendo combobox das contas
+        private void PreencherCmbIdConta()
+        {
+            foreach (var x in conta.ListaContas)
+            {
+                cmbIdConta.Items.Add(x.Id_Conta);
+            }
         }
 
         // preenche o nome da Classe quando muda o combobox de id da classe
+        private void cmbIdClasse_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbIdClasse_SelectedIndexChanged();
+        }
         private void cmbIdClasse_SelectedIndexChanged()
         {
-            txtNomeClasse.Enabled = true;
-
             foreach (var x in classe.ListaClasses)
             {
                 if (cmbIdClasse.Text == x.IdClasse.ToString())
@@ -96,11 +115,24 @@ namespace Controle_Financeiro_Pessoal.View
                     break;
                 }
             }
+        }
 
-            txtNomeClasse.Enabled = false;
+        // preenche o nome da Categoria quando muda o combobox de id da Categoria
+        private void cmbIdCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtNomeCategoria.Text = categoria.NomeCategoria(Convert.ToInt32(cmbIdCategoria.Text));
+            cmbIdClasse.Items.Clear();
+            cmbIdClasse.Text = "";
+            txtNomeClasse.Text = "";
+            PreencherCmbIdClasse();
+            cmbIdClasse.Enabled = true;
         }
 
         // preenche o nome da Conta quando muda o combobox de id da Conta
+        private void cmbIdConta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbIdConta_SelectedIndexChanged();
+        }
         private void cmbIdConta_SelectedIndexChanged()
         {
             txtConta.Enabled = true;
@@ -117,18 +149,31 @@ namespace Controle_Financeiro_Pessoal.View
             txtConta.Enabled = false;
         }
 
-        // método para exlcluir movimentacão através do click no botão Excluir
-        private void btnExcluir_Click(object sender, EventArgs e)
+        // verifica se todos os campos estão preenchidos
+        private bool VerificaPreenchimento()
         {
-            if (movimento.ExcluirMovimentacao(Convert.ToInt32(cmbIdMovimento.Text)))
+            if (cmbIdCategoria.Text == "" || cmbIdClasse.Text == "" || cmbIdConta.Text == "" || txtValor.Text == "" || txtData.Text == "")
             {
-                frmlistamovimentos.AtualizarLvwmMovimentacoes();
-                MessageBox.Show("Movimento excluída com sucesso!");
-                // fecha o form quando consegue excluir classe
-                this.Close();
+                return false;
+            }
+            return true;
+        }
+
+        // método para editar movimentacão através do click no botão salvar
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            if (VerificaPreenchimento())
+            {
+                if (movimento.AlterarMoviventacao(Convert.ToInt32(cmbIdMovimento.Text), Convert.ToInt32(cmbIdCategoria.Text), Convert.ToInt32(cmbIdClasse.Text), Convert.ToInt32(cmbIdConta.Text), Convert.ToDouble(txtValor.Text), Convert.ToDateTime(txtData.Text), txtFornecedor.Text, txtDescricao.Text))
+                {
+                    frmlistamovimentos.AtualizarLvwmMovimentacoes();
+                    // toda vez que clicar em salvar, fecha o form
+                    MessageBox.Show("Nome da Conta alterado com sucesso!");
+                }
             }
             else
-                MessageBox.Show("Não foi possível excluir o Movimento.");
+                MessageBox.Show("Não foi possível alterar o nome da Conta.\n\nVerifique se todos os campos estão preenchidos corretamente");
+            this.Close();
         }
 
         // botão cancelar fecha o form

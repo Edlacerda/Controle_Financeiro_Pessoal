@@ -22,9 +22,6 @@ namespace Controle_Financeiro_Pessoal.Controller
         {
             if (AcessoDB.GravarClasse(IDCategoria, Classe))
             {
-                // ver como colocar Id da classe (gerado pelo banco de dados)
-                // Classes novaClasse = new Classes();
-                //ListaClasses.Add(novaClasse);
                 return true;
             }
             return false;

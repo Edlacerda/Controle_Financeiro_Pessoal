@@ -24,7 +24,6 @@ namespace Controle_Financeiro_Pessoal.Controller
                 movimentos = new Movimentacoes();
                 ListaContas = AcessoDB.LerContas();
                 movimentos.InserirMovimento(1, 1, ListaContas[ListaContas.Count - 1].Id_Conta, saldo, DateTime.Today, conta, "Nova Conta");
-                ////ListaContas.Add(novaConta);
                 return true;
             }
             return false;

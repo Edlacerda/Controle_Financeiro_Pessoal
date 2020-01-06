@@ -66,12 +66,16 @@ namespace Controle_Financeiro_Pessoal.View
         // método para salvar conta através do click no botão salvar, verificando se conta de transferência possui saldo suficiente
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            //verifica se os campos estão preenchidos
             if (VerificaPreenchimento())
             {
+                // estando preenchidos, verifica se foi marcado a transferência de outra conta
                 if (chkTransferencia.Checked)
                 {
+                    // sendo transferência, verifica se a conta que será transferida tem saldo suficiente.
                     if (Convert.ToDouble(txtSaldoAtualTransf.Text) > Convert.ToDouble(txtSaldoInicial.Text))
                     {
+                        // tendo saldo, realiza movimento para tirar da conta de transferência e cria a nova conta
                         movimento.InserirMovimento(2, 6, Convert.ToInt32(cmbIdContaTransf.Text), Convert.ToDouble(txtSaldoInicial.Text), DateTime.Today, txtNomeConta.Text, "Transferência para a nova conta");
                         CriarNovaConta();
                     }
@@ -82,6 +86,7 @@ namespace Controle_Financeiro_Pessoal.View
                 }
                 else
                 {
+                    // se não for de transferência, cria a nova conta normalmente
                     CriarNovaConta();
                 }
             }
@@ -106,12 +111,13 @@ namespace Controle_Financeiro_Pessoal.View
         // verifica se todos os campos estão preenchidos
         private bool VerificaPreenchimento()
         {
-            // || txtFornecedor.Text == "" || txtDescricao.Text == ""
-            if (txtNomeConta.Text == "" || txtSaldoInicial.Text == "")
+            // primeiro verifica se todos os campos de transferência estão preenchidos caso o checkbox esteja marcado
+            if (chkTransferencia.Checked && (cmbIdContaTransf.Text == "" || txtSaldoAtualTransf.Text == "" || txtNomeContaTransf.Text == ""))
             {
                 return false;
             }
-            if (chkTransferencia.Checked && (cmbIdContaTransf.Text == "" || txtSaldoAtualTransf.Text == "" || txtNomeContaTransf.Text == ""))
+            // verifica também se os campoos de criação da nova Conta estão preenchidos (independente dos campos de transferência)
+            if (txtNomeConta.Text == "" || txtSaldoInicial.Text == "")
             {
                 return false;
             }

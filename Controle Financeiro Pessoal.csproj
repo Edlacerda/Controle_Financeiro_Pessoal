@@ -48,86 +48,86 @@
   <ItemGroup>
     <Compile Include="Controller\Categoria.cs" />
     <Compile Include="Controller\Classificacoes.cs" />
-    <Compile Include="Controller\Classificacoes_DAO.cs" />
-    <Compile Include="Controller\Movimentacoes_DAO.cs" />
+    <Compile Include="Controller\DataBase\Classificacoes_DAO.cs" />
+    <Compile Include="Controller\DataBase\Movimentacoes_DAO.cs" />
     <Compile Include="Controller\Movimentacoes.cs" />
     <Compile Include="Controller\NConta.cs" />
-    <Compile Include="Controller\NConta_DAO.cs" />
+    <Compile Include="Controller\DataBase\NConta_DAO.cs" />
     <Compile Include="Model\Categorias.cs" />
     <Compile Include="Model\Classes.cs" />
     <Compile Include="Model\Contas.cs" />
     <Compile Include="Model\Data.cs" />
     <Compile Include="Model\Movimentos.cs" />
-    <Compile Include="View\frmMovimentacaoNova.cs">
+    <Compile Include="View\Movimentacao\frmMovimentacaoNova.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmMovimentacaoNova.Designer.cs">
+    <Compile Include="View\Movimentacao\frmMovimentacaoNova.Designer.cs">
       <DependentUpon>frmMovimentacaoNova.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmMovimentacaoEditar.cs">
+    <Compile Include="View\Movimentacao\frmMovimentacaoEditar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmMovimentacaoEditar.Designer.cs">
+    <Compile Include="View\Movimentacao\frmMovimentacaoEditar.Designer.cs">
       <DependentUpon>frmMovimentacaoEditar.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmMovimentacaoExcluir.cs">
+    <Compile Include="View\Movimentacao\frmMovimentacaoExcluir.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmMovimentacaoExcluir.Designer.cs">
+    <Compile Include="View\Movimentacao\frmMovimentacaoExcluir.Designer.cs">
       <DependentUpon>frmMovimentacaoExcluir.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmMovimentacaoLista.cs">
+    <Compile Include="View\Movimentacao\frmMovimentacaoLista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmMovimentacaoLista.Designer.cs">
+    <Compile Include="View\Movimentacao\frmMovimentacaoLista.Designer.cs">
       <DependentUpon>frmMovimentacaoLista.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmContaEditar.cs">
+    <Compile Include="View\Conta\frmContaEditar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmContaEditar.Designer.cs">
+    <Compile Include="View\Conta\frmContaEditar.Designer.cs">
       <DependentUpon>frmContaEditar.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmClassificacaoExcluir.cs">
+    <Compile Include="View\Classificacao\frmClassificacaoExcluir.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmClassificacaoExcluir.Designer.cs">
+    <Compile Include="View\Classificacao\frmClassificacaoExcluir.Designer.cs">
       <DependentUpon>frmClassificacaoExcluir.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmClassificacaoEditar.cs">
+    <Compile Include="View\Classificacao\frmClassificacaoEditar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmClassificacaoEditar.Designer.cs">
+    <Compile Include="View\Classificacao\frmClassificacaoEditar.Designer.cs">
       <DependentUpon>frmClassificacaoEditar.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmContaExcluir.cs">
+    <Compile Include="View\Conta\frmContaExcluir.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmContaExcluir.Designer.cs">
+    <Compile Include="View\Conta\frmContaExcluir.Designer.cs">
       <DependentUpon>frmContaExcluir.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmContaNova.cs">
+    <Compile Include="View\Conta\frmContaNova.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmContaNova.Designer.cs">
+    <Compile Include="View\Conta\frmContaNova.Designer.cs">
       <DependentUpon>frmContaNova.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmContaLista.cs">
+    <Compile Include="View\Conta\frmContaLista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmContaLista.Designer.cs">
+    <Compile Include="View\Conta\frmContaLista.Designer.cs">
       <DependentUpon>frmContaLista.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmClassificacoesLista.cs">
+    <Compile Include="View\Classificacao\frmClassificacoesLista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmClassificacoesLista.Designer.cs">
+    <Compile Include="View\Classificacao\frmClassificacoesLista.Designer.cs">
       <DependentUpon>frmClassificacoesLista.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmClassificacaoNova.cs">
+    <Compile Include="View\Classificacao\frmClassificacaoNova.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmClassificacaoNova.Designer.cs">
+    <Compile Include="View\Classificacao\frmClassificacaoNova.Designer.cs">
       <DependentUpon>frmClassificacaoNova.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmControleFinanceiro.cs">
@@ -153,40 +153,40 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\frmMovimentacaoNova.resx">
+    <EmbeddedResource Include="View\Movimentacao\frmMovimentacaoNova.resx">
       <DependentUpon>frmMovimentacaoNova.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmMovimentacaoEditar.resx">
+    <EmbeddedResource Include="View\Movimentacao\frmMovimentacaoEditar.resx">
       <DependentUpon>frmMovimentacaoEditar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmMovimentacaoExcluir.resx">
+    <EmbeddedResource Include="View\Movimentacao\frmMovimentacaoExcluir.resx">
       <DependentUpon>frmMovimentacaoExcluir.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmMovimentacaoLista.resx">
+    <EmbeddedResource Include="View\Movimentacao\frmMovimentacaoLista.resx">
       <DependentUpon>frmMovimentacaoLista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmContaEditar.resx">
+    <EmbeddedResource Include="View\Conta\frmContaEditar.resx">
       <DependentUpon>frmContaEditar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmClassificacaoExcluir.resx">
+    <EmbeddedResource Include="View\Classificacao\frmClassificacaoExcluir.resx">
       <DependentUpon>frmClassificacaoExcluir.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmClassificacaoEditar.resx">
+    <EmbeddedResource Include="View\Classificacao\frmClassificacaoEditar.resx">
       <DependentUpon>frmClassificacaoEditar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmContaExcluir.resx">
+    <EmbeddedResource Include="View\Conta\frmContaExcluir.resx">
       <DependentUpon>frmContaExcluir.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmContaNova.resx">
+    <EmbeddedResource Include="View\Conta\frmContaNova.resx">
       <DependentUpon>frmContaNova.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmContaLista.resx">
+    <EmbeddedResource Include="View\Conta\frmContaLista.resx">
       <DependentUpon>frmContaLista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmClassificacoesLista.resx">
+    <EmbeddedResource Include="View\Classificacao\frmClassificacoesLista.resx">
       <DependentUpon>frmClassificacoesLista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmClassificacaoNova.resx">
+    <EmbeddedResource Include="View\Classificacao\frmClassificacaoNova.resx">
       <DependentUpon>frmClassificacaoNova.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmControleFinanceiro.resx">

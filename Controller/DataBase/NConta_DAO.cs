@@ -31,7 +31,7 @@ namespace Controle_Financeiro_Pessoal.Controller
             }
         }
 
-        // método booleano para informar ao usuário se obteve sucesso ao salvar as informações no banco de dado
+        // método booleano para informar se obteve sucesso ao salvar as informações no banco de dado
         public bool GravarConta(string conta, double saldo)
         {
             // definindo sql de insersão e atribuindo os parâmetros
@@ -47,7 +47,6 @@ namespace Controle_Financeiro_Pessoal.Controller
         // Método de alteração do nome da conta
         public bool AlterarNomeConta(int id_Conta, string conta)
         {
-            //colocar verificação de se existir movimentações dentro da conta
             DBContas.cmd = new SqlCommand("UPDATE Conta SET Conta = '" + conta + "' WHERE IdConta = " + id_Conta, DBContas.sqlConn);
             if (conexão(DBContas.cmd))
                 return true;
@@ -57,7 +56,6 @@ namespace Controle_Financeiro_Pessoal.Controller
         // Método de alteração do saldo da conta
         public bool AlterarSaldo(int id_Conta, double saldo)
         {
-            //colocar verificação de se existir movimentações dentro da conta
             DBContas.cmd = new SqlCommand("UPDATE Conta SET Saldo = '" + saldo.ToString("F2", CultureInfo.InvariantCulture) + "' WHERE IdConta = " + id_Conta, DBContas.sqlConn);
             if (conexão(DBContas.cmd))
                 return true;
@@ -67,8 +65,6 @@ namespace Controle_Financeiro_Pessoal.Controller
         // Método para excluir a movimentação financeira
         public bool DeletarConta(int Id_Conta)
         {
-            //colocar verificação de se existir movimentações dentro da conta
-
             DBContas.cmd = new SqlCommand("DELETE FROM Conta WHERE IdConta = " + Id_Conta, DBContas.sqlConn);
             if (conexão(DBContas.cmd))
                 return true;

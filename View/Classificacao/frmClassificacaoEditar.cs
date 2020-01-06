@@ -64,22 +64,17 @@ namespace Controle_Financeiro_Pessoal.View
         // preenche o nome da Categoria e libera o combobox de classe quando muda o combobox de id da Categoria
         private void cmbIdCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtNomeCategoria.Enabled = true;
-
             txtNomeCategoria.Text = categoria.NomeCategoria(Convert.ToInt32(cmbIdCategoria.Text));
             cmbIdClasse.Items.Clear();
             cmbIdClasse.Text = "";
             txtNomeClasse.Text = "";
             PreencherCmbIdClasse();
             cmbIdClasse.Enabled = true;
-
-            txtNomeCategoria.Enabled = false;
         }
 
         // verifica se todos os campos estão preenchidos
         private bool VerificaPreenchimento()
         {
-            // || txtFornecedor.Text == "" || txtDescricao.Text == ""
             if (txtNomeClasse.Text == "" || cmbIdCategoria.Text == "" || cmbIdClasse.Text == "")
             {
                 return false;

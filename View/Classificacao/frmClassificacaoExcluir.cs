@@ -44,9 +44,6 @@ namespace Controle_Financeiro_Pessoal.View
         // preecher nome da classe e Id da categoria nos textboxs caso mudaça de valor do combobox
         private void cmbIdClasse_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtNomeClasse.Enabled = true;
-            cmbIdCategoria.Enabled = true;
-
             foreach (var x in classe.ListaClasses)
             {
                 if (cmbIdClasse.Text == Convert.ToString(x.IdClasse))
@@ -57,9 +54,6 @@ namespace Controle_Financeiro_Pessoal.View
                     break;
                 }
             }
-
-            txtNomeClasse.Enabled = false;
-            cmbIdCategoria.Enabled = false;
         }
 
         //preenchendo categorias do 1 = ENTRADAS, 2 = SAÍDAS
@@ -85,7 +79,5 @@ namespace Controle_Financeiro_Pessoal.View
             else
                 MessageBox.Show("Não foi possível alterar a Classe.\n\nVerifique se todos os campos estão preenchidos corretamente");
         }
-
     }
-
 }

@@ -31,7 +31,7 @@ namespace Controle_Financeiro_Pessoal.Controller
             }
         }
 
-        // método booleano para informar ao usuário se obteve sucesso ao salvar as informações no banco de dado
+        // método booleano para informar se obteve sucesso ao salvar as informações no banco de dado
         public bool GravarMovimentacao(int id_Categoria, int id_Classe, int id_Conta, double valor, DateTime data, string fornecedor, string descricao)
         {
             // definindo sql de insersão e atribuindo os parâmetros

@@ -31,7 +31,6 @@ namespace Controle_Financeiro_Pessoal.View
         // verifica se todos os campos estão preenchidos
         private bool VerificaPreenchimento()
         {
-            // || txtFornecedor.Text == "" || txtDescricao.Text == ""
             if (txtNomeClasse.Text == "" || cmbCategoria.Text == "")
             {
                 return false;

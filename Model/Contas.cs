@@ -8,7 +8,6 @@ namespace Controle_Financeiro_Pessoal.Model
         public string Conta { get; set; }
         public double Saldo { get; set; }
 
-
         public Contas(int idConta, string conta, double saldo)
         {
             Id_Conta = idConta;

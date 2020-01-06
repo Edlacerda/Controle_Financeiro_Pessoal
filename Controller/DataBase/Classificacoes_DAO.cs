@@ -9,7 +9,6 @@ namespace Controle_Financeiro_Pessoal.Controller
     class Classificacoes_DAO
     {
         public Data DBClassificacoes { get; set; }
-                public Classes classificacao { get; set; }
 
         public Classificacoes_DAO()
         {
@@ -31,7 +30,7 @@ namespace Controle_Financeiro_Pessoal.Controller
             }
         }
 
-        // método booleano para informar ao usuário se obteve sucesso ao salvar as informações no banco de dado
+        // método booleano para informar se obteve sucesso ao salvar as informações no banco de dado
         public bool GravarClasse(int id_Categoria,  string classe)
         {
             // definindo sql de insersão e atribuindo os parâmetros
@@ -78,6 +77,5 @@ namespace Controle_Financeiro_Pessoal.Controller
             DBClassificacoes.sqlConn.Close();
             return lista;
         }
-
     }
 }

@@ -73,8 +73,6 @@ namespace Controle_Financeiro_Pessoal.View
         // preenche o nome da Classe quando muda o combobox de id da classe
         private void cmbIdClasse_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //txtNomeClasse.Enabled = true;
-
             foreach (var x in classe.ListaClasses)
             {
                 if (cmbIdClasse.Text == x.IdClasse.ToString())
@@ -83,15 +81,11 @@ namespace Controle_Financeiro_Pessoal.View
                     break;
                 }
             }
-
-            //txtNomeClasse.Enabled = false;
         }
 
         // preenche o nome da Conta quando muda o combobox de id da Conta
         private void cmbIdConta_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtConta.Enabled = true;
-
             foreach (var x in conta.ListaContas)
             {
                 if (cmbIdConta.Text == x.Id_Conta.ToString())
@@ -100,7 +94,6 @@ namespace Controle_Financeiro_Pessoal.View
                     break;
                 }
             }
-            txtConta.Enabled = false;
         }
 
         // método para editar movimentacão através do click no botão salvar
@@ -123,7 +116,6 @@ namespace Controle_Financeiro_Pessoal.View
         // verifica se todos os campos estão preenchidos
         private bool VerificaPreenchimento()
         {
-            // || txtFornecedor.Text == "" || txtDescricao.Text == ""
             if (cmbIdCategoria.Text == "" || cmbIdClasse.Text == "" || cmbIdConta.Text == "" || txtValor.Text == "" || txtData.Text == "")
             {
                 return false;
