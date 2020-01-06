@@ -114,5 +114,18 @@ namespace Controle_Financeiro_Pessoal.Controller
             }
             return false;
         }
+
+        // retorna o nome da conta conforme id
+        public string NomeConta(int idConta)
+        {
+            foreach (var x in ListaContas)
+            {
+                if (x.Id_Conta == idConta)
+                {
+                    return x.Conta;
+                }
+            }
+            return "";
+        }
     }
 }

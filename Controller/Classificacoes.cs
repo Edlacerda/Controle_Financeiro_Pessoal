@@ -81,5 +81,18 @@ namespace Controle_Financeiro_Pessoal.Controller
             }
             return false;
         }
+
+        // retorna o nome da classe conforme id
+        public string NomeClasse(int idClasse)
+        {
+            foreach (var x in ListaClasses)
+            {
+                if (x.IdClasse == idClasse)
+                {
+                    return x.Classe;
+                }
+            }
+            return "";
+        }
     }
 }

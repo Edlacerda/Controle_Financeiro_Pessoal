@@ -38,9 +38,9 @@ namespace Controle_Financeiro_Pessoal.View
             foreach (var x in movimento.ListaMovimentacoes)
             {
                 ListViewItem item = new ListViewItem(x.Id_Movimento.ToString());
-                item.SubItems.Add(conta.ListaContas[conta.ListaContas.Count - 1].Conta);
+                item.SubItems.Add(conta.NomeConta(x.Id_Conta));
                 item.SubItems.Add(categoria.NomeCategoria(x.Id_Categoria));
-                item.SubItems.Add(classe.ListaClasses[x.Id_Classe - 1].Classe);
+                item.SubItems.Add(classe.NomeClasse(x.Id_Classe));
                 item.SubItems.Add(x.Valor.ToString("C"));
                 item.SubItems.Add(x.Data.ToString("dd/MM/yyyy"));
                 item.SubItems.Add(x.Fornecedor);
