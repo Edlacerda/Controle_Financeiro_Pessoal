@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Controle_Financeiro_Pessoal.Model;
 
 namespace Controle_Financeiro_Pessoal.Controller
@@ -78,6 +79,65 @@ namespace Controle_Financeiro_Pessoal.Controller
                 }
             }
             return false;
+        }
+
+        public string FluxoClasses(int idcategoria, int idclasse, int mes, int ano)
+        {
+            string valor = "0";
+            var agrupamento = ListaMovimentacoes.Select(k => new { k.Id_Categoria, k.Id_Classe, k.Data.Year, k.Data.Month, k.Valor }).GroupBy(x => new { x.Year, x.Month, x.Id_Classe, x.Id_Categoria }, (key, group) => new
+            {
+                categoria = key.Id_Categoria,
+                classe = key.Id_Classe,
+                ano = key.Year,
+                mes = key.Month,
+                soma = group.Sum(k => k.Valor).ToString("#,###.00")
+            });
+
+            foreach (var y in agrupamento)
+            {
+                if (y.categoria == idcategoria && y.classe == idclasse && y.mes == mes && y.ano == ano)
+                {
+                    valor = y.soma;
+                }
+            }
+
+            return valor;
+        }
+
+        public string FluxoCategoria(int idcategoria, int mes, int ano)
+        {
+            string valor = "0";
+            var agrupamento = ListaMovimentacoes.Select(k => new { k.Id_Categoria, k.Data.Year, k.Data.Month, k.Valor }).GroupBy(x => new { x.Year, x.Month, x.Id_Categoria }, (key, group) => new
+            {
+                categoria = key.Id_Categoria,
+                ano = key.Year,
+                mes = key.Month,
+                soma = group.Sum(k => k.Valor).ToString("#,###.00")
+            });
+
+            foreach (var y in agrupamento)
+            {
+                if (y.categoria == idcategoria && y.mes == mes && y.ano == ano)
+                {
+                    valor = y.soma;
+                }
+            }
+
+            return valor;
+        }
+
+        public List<int> AnosMovimentos()
+        {
+            List<int> anos = new List<int>();
+            var valores = ListaMovimentacoes.Select(k => new { k.Data.Year }).GroupBy(x => new { x.Year }, (key, group) => new
+            {
+                ano = key.Year,
+            }).ToList();
+
+            foreach (var valor in valores)
+                anos.Add(valor.ano);
+
+            return anos;
         }
     }
 }

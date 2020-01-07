@@ -65,7 +65,7 @@ namespace Controle_Financeiro_Pessoal.View
                     cmbIdClasse_SelectedIndexChanged();
                     cmbIdConta.Text = x.Id_Conta.ToString();
                     cmbIdConta_SelectedIndexChanged();
-                    txtValor.Text = x.Valor.ToString("0.00");
+                    txtValor.Text = x.Valor.ToString("#,###.00");
                     txtData.Text = x.Data.ToString("dd/MM/yyyy");
                     txtFornecedor.Text = x.Fornecedor;
                     txtDescricao.Text = x.Descricao;

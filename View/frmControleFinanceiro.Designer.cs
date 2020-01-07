@@ -36,7 +36,6 @@
             this.tsmiRelatorios = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiFluxoDeCaixa = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiInformacoes = new System.Windows.Forms.ToolStripMenuItem();
-            this.saldoPorContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,29 +64,28 @@
             // tsmiClasses
             // 
             this.tsmiClasses.Name = "tsmiClasses";
-            this.tsmiClasses.Size = new System.Drawing.Size(180, 22);
+            this.tsmiClasses.Size = new System.Drawing.Size(159, 22);
             this.tsmiClasses.Text = "Classes";
             this.tsmiClasses.Click += new System.EventHandler(this.tsmiClasses_Click);
             // 
             // tmsiContas
             // 
             this.tmsiContas.Name = "tmsiContas";
-            this.tmsiContas.Size = new System.Drawing.Size(180, 22);
+            this.tmsiContas.Size = new System.Drawing.Size(159, 22);
             this.tmsiContas.Text = "Contas";
             this.tmsiContas.Click += new System.EventHandler(this.tmsiContas_Click);
             // 
             // tsmiMovimentacoes
             // 
             this.tsmiMovimentacoes.Name = "tsmiMovimentacoes";
-            this.tsmiMovimentacoes.Size = new System.Drawing.Size(180, 22);
+            this.tsmiMovimentacoes.Size = new System.Drawing.Size(159, 22);
             this.tsmiMovimentacoes.Text = "Movimentações";
             this.tsmiMovimentacoes.Click += new System.EventHandler(this.tsmiMovimentacoes_Click);
             // 
             // tsmiRelatorios
             // 
             this.tsmiRelatorios.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiFluxoDeCaixa,
-            this.saldoPorContaToolStripMenuItem});
+            this.tsmiFluxoDeCaixa});
             this.tsmiRelatorios.Name = "tsmiRelatorios";
             this.tsmiRelatorios.Size = new System.Drawing.Size(71, 20);
             this.tsmiRelatorios.Text = "Relatórios";
@@ -105,12 +103,6 @@
             this.tsmiInformacoes.Size = new System.Drawing.Size(85, 20);
             this.tsmiInformacoes.Text = "Informações";
             this.tsmiInformacoes.Click += new System.EventHandler(this.tsmiInformacoes_Click);
-            // 
-            // saldoPorContaToolStripMenuItem
-            // 
-            this.saldoPorContaToolStripMenuItem.Name = "saldoPorContaToolStripMenuItem";
-            this.saldoPorContaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.saldoPorContaToolStripMenuItem.Text = "Saldo por Conta";
             // 
             // frmControleFinanceiro
             // 
@@ -138,7 +130,6 @@
         private System.Windows.Forms.ToolStripMenuItem tmsiContas;
         private System.Windows.Forms.ToolStripMenuItem tsmiMovimentacoes;
         private System.Windows.Forms.ToolStripMenuItem tsmiInformacoes;
-        private System.Windows.Forms.ToolStripMenuItem saldoPorContaToolStripMenuItem;
     }
 }
 

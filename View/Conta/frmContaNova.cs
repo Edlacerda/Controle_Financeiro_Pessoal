@@ -55,7 +55,7 @@ namespace Controle_Financeiro_Pessoal.View
             {
                 if (cmbIdContaTransf.Text == x.Id_Conta.ToString())
                 {
-                    txtSaldoAtualTransf.Text = x.Saldo.ToString("0.00");
+                    txtSaldoAtualTransf.Text = x.Saldo.ToString("#,###.00");
                     txtNomeContaTransf.Text = x.Conta;
                 }
             }

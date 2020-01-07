@@ -41,7 +41,7 @@ namespace Controle_Financeiro_Pessoal.View
             {
                 if (cmbIDContaATransferir.Text == x.Id_Conta.ToString())
                 {
-                    txtSaldoContaATransferir.Text = x.Saldo.ToString("0.00");
+                    txtSaldoContaATransferir.Text = x.Saldo.ToString("#,###.00");
                     txtContaATransferir.Text = x.Conta;
                     break;
                 }
@@ -53,7 +53,7 @@ namespace Controle_Financeiro_Pessoal.View
             {
                 if (cmbIDContaTransfencia.Text == x.Id_Conta.ToString())
                 {
-                    txtSaldoContaTransfencia.Text = x.Saldo.ToString("0.00");
+                    txtSaldoContaTransfencia.Text = x.Saldo.ToString("#,###.00");
                     txtContaTransfencia.Text = x.Conta;
                     break;
                 }
