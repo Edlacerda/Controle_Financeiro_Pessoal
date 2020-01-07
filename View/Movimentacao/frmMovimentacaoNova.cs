@@ -45,6 +45,9 @@ namespace Controle_Financeiro_Pessoal.View
                 if (cmbIdCategoria.Text == x.Id_Categoria.ToString())
                     cmbIdClasse.Items.Add(x.IdClasse);
             }
+            cmbIdClasse.Items.Remove(1);
+            cmbIdClasse.Items.Remove(2);
+            cmbIdClasse.Items.Remove(3);
         }
 
         //preenchendo combobox das contas
