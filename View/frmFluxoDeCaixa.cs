@@ -39,12 +39,15 @@ namespace Controle_Financeiro_Pessoal.View
 
             foreach (var x in classes.ListaClasses)
             {
-                ListViewItem item = new ListViewItem(x.Classe);
-                for (int i = 1; i <= 12; i++)
+                if (x.Id_Categoria == categoria)
                 {
-                    item.SubItems.Add(movimentos.FluxoClasses(categoria, x.IdClasse, i, ano));
+                    ListViewItem item = new ListViewItem(x.Classe);
+                    for (int i = 1; i <= 12; i++)
+                    {
+                        item.SubItems.Add(movimentos.FluxoClasses(categoria, x.IdClasse, i, ano));
+                    }
+                    lvwn.Items.Add(item);
                 }
-                lvwn.Items.Add(item);
             }
         }
 

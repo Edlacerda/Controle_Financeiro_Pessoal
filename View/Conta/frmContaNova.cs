@@ -76,7 +76,7 @@ namespace Controle_Financeiro_Pessoal.View
                     if (Convert.ToDouble(txtSaldoAtualTransf.Text) > Convert.ToDouble(txtSaldoInicial.Text))
                     {
                         // tendo saldo, realiza movimento para tirar da conta de transferência e cria a nova conta
-                        movimento.InserirMovimento(2, 6, Convert.ToInt32(cmbIdContaTransf.Text), Convert.ToDouble(txtSaldoInicial.Text), DateTime.Today, txtNomeConta.Text, "Transferência para a nova conta");
+                        movimento.InserirMovimento(2, 3, Convert.ToInt32(cmbIdContaTransf.Text), Convert.ToDouble(txtSaldoInicial.Text), DateTime.Today, txtNomeConta.Text, "Transferência para a nova conta");
                         CriarNovaConta();
                     }
                     else
