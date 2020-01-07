@@ -106,6 +106,7 @@
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(139, 20);
             this.txtValor.TabIndex = 2;
+            this.txtValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDouble_KeyPress);
             // 
             // lblValor
             // 
@@ -182,7 +183,7 @@
             this.lblIDContaTransfencia.TabIndex = 12;
             this.lblIDContaTransfencia.Text = "ID CONTRA DE TRANSFERENCIA";
             // 
-            // frmMovimentacaoTransferencia
+            // frmContaTransferencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -203,7 +204,8 @@
             this.Controls.Add(this.lblContaATransferir);
             this.Controls.Add(this.lblIDContaATransferir);
             this.Controls.Add(this.btnTransferir);
-            this.Name = "frmMovimentacaoTransferencia";
+            this.Name = "frmContaTransferencia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TRANSFERÊNCIA ENTRE CONTAS";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -93,7 +93,7 @@
             // tsmiFluxoDeCaixa
             // 
             this.tsmiFluxoDeCaixa.Name = "tsmiFluxoDeCaixa";
-            this.tsmiFluxoDeCaixa.Size = new System.Drawing.Size(180, 22);
+            this.tsmiFluxoDeCaixa.Size = new System.Drawing.Size(151, 22);
             this.tsmiFluxoDeCaixa.Text = "Fluxo de Caixa";
             this.tsmiFluxoDeCaixa.Click += new System.EventHandler(this.tsmiFluxoDeCaixa_Click);
             // 
@@ -112,6 +112,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmControleFinanceiro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CONTROLE FINANCEIRO PESSOAL";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -143,6 +143,7 @@
             this.Controls.Add(this.lblNomeClasse);
             this.Controls.Add(this.btnExcluir);
             this.Name = "frmClassificacaoExcluir";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EXCLUIR CLASSIFICAÇÃO";
             this.ResumeLayout(false);
             this.PerformLayout();

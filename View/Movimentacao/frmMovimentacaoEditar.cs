@@ -176,6 +176,17 @@ namespace Controle_Financeiro_Pessoal.View
             this.Close();
         }
 
+        // função para que não seja digitado um valor que não seja double
+        private void txtDouble_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char chr = e.KeyChar;
+            if (!Char.IsDigit(chr) && chr != 8 && chr != ',')
+            {
+                e.Handled = true;
+                MessageBox.Show("Favor digitar apenas valores monetários!!!");
+            }
+        }
+
         // botão cancelar fecha o form
         private void btnCancelar_Click(object sender, EventArgs e)
         {

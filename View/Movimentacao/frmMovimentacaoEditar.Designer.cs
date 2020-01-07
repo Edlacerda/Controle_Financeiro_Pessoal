@@ -291,7 +291,9 @@
             this.Controls.Add(this.lblClasse);
             this.Controls.Add(this.btnSalvar);
             this.Name = "frmMovimentacaoEditar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ALTERAR MOVIMENTAÇÃO";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDouble_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 

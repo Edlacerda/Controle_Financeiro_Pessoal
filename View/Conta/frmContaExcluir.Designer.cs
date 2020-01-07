@@ -123,6 +123,7 @@
             this.Controls.Add(this.lblSaldoAtual);
             this.Controls.Add(this.btnExcluir);
             this.Name = "frmContaExcluir";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EXCLUIR CONTA";
             this.ResumeLayout(false);
             this.PerformLayout();

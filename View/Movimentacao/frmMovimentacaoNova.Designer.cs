@@ -180,6 +180,7 @@
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(139, 20);
             this.txtValor.TabIndex = 3;
+            this.txtValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDouble_KeyPress);
             // 
             // lblValor
             // 
@@ -269,6 +270,7 @@
             this.Controls.Add(this.lblClasse);
             this.Controls.Add(this.btnSalvar);
             this.Name = "frmMovimentacaoNova";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NOVA MOVIMENTAÇÃO";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -144,6 +144,7 @@
             this.Controls.Add(this.lblNomeClasse);
             this.Controls.Add(this.btnSalvar);
             this.Name = "frmClassificacaoEditar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EDITAR CLASSIFICAÇÃO";
             this.ResumeLayout(false);
             this.PerformLayout();

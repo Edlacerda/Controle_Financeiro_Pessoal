@@ -102,6 +102,7 @@
             this.Controls.Add(this.lblNomeConta);
             this.Controls.Add(this.btnSalvar);
             this.Name = "frmContaEditar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EDITAR NOME DA CONTA";
             this.ResumeLayout(false);
             this.PerformLayout();

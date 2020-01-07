@@ -118,6 +118,7 @@
             this.Controls.Add(this.btnNovaConta);
             this.Controls.Add(this.lvwContas);
             this.Name = "frmContaLista";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LISTA DAS CONTAS";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmContaLista_FormClosed);
             this.ResumeLayout(false);

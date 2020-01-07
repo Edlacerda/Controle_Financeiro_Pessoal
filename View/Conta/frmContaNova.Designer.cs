@@ -97,6 +97,7 @@
             this.txtSaldoInicial.Name = "txtSaldoInicial";
             this.txtSaldoInicial.Size = new System.Drawing.Size(124, 20);
             this.txtSaldoInicial.TabIndex = 1;
+            this.txtSaldoInicial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDouble_KeyPress);
             // 
             // chkTransferencia
             // 
@@ -199,6 +200,7 @@
             this.Controls.Add(this.lblNomeConta);
             this.Controls.Add(this.btnSalvar);
             this.Name = "frmContaNova";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NOVA CONTA";
             this.grpTransferencia.ResumeLayout(false);
             this.grpTransferencia.PerformLayout();

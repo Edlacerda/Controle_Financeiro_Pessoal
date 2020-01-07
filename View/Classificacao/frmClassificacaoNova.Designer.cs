@@ -122,6 +122,7 @@
             this.Controls.Add(this.lblNomeClasse);
             this.Controls.Add(this.btnSalvar);
             this.Name = "frmClassificacaoNova";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NOVA CLASSIFICAÇÃO";
             this.ResumeLayout(false);
             this.PerformLayout();

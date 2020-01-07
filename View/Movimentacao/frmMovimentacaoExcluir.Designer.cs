@@ -285,6 +285,7 @@
             this.Controls.Add(this.lblClasse);
             this.Controls.Add(this.btnExcluir);
             this.Name = "frmMovimentacaoExcluir";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EXCLUIR MOVIMENTAÇÃO";
             this.ResumeLayout(false);
             this.PerformLayout();
