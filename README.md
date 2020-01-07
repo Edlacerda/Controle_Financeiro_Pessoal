@@ -6,8 +6,8 @@ O objetivo do programa é fazer um pequeno controle financeiro pessoal classific
 Desta forma será possível gerar informações para identificar onde está sendo gasto seu dinheiro.
 Também será possível verificar o saldo de cada conta do usuário (conta de banco, investimentos, dinheiro...).
 
-Para tanto, o programa desenvolvido usando o padrão MVC em C# .Net, com utilização de Wforms para o front.
-O banco de dados será feito em SQL Server (local), já com a adição de algumas classificações financeiras:
+Para tanto, o programa desenvolvido usando Visual Studio 2019 com o padrão MVC em C# .Net, com utilização de Wforms para o front.
+O banco de dados feito em SQL Server (local), já com a adição de algumas classificações financeiras:
 
 Categoria - Entrada e Saída
 
