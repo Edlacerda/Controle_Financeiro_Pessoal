@@ -27,6 +27,7 @@ namespace Controle_Financeiro_Pessoal.View
             txtNomeClasse.Enabled = false;
             cmbIdClasse.Enabled = false;
             txtConta.Enabled = false;
+            txtSaldoConta.Enabled = false;
         }
 
         //preenchendo categorias do 1 = ENTRADAS, 2 = SAÍDAS
@@ -87,6 +88,7 @@ namespace Controle_Financeiro_Pessoal.View
                 if (cmbIdConta.Text == x.Id_Conta.ToString())
                 {
                     txtConta.Text = x.Conta;
+                    txtSaldoConta.Text = x.Saldo.ToString("#,###.00");
                     break;
                 }
             }

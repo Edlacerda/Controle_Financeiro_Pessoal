@@ -50,6 +50,8 @@
             this.lblDescricao = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.txtData = new System.Windows.Forms.MaskedTextBox();
+            this.lblSaldoConta = new System.Windows.Forms.Label();
+            this.txtSaldoConta = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -176,7 +178,7 @@
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(100, 121);
+            this.txtValor.Location = new System.Drawing.Point(96, 121);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(139, 20);
             this.txtValor.TabIndex = 3;
@@ -234,13 +236,29 @@
             // 
             // txtData
             // 
-            this.txtData.Location = new System.Drawing.Point(348, 120);
+            this.txtData.Location = new System.Drawing.Point(319, 120);
             this.txtData.Mask = "00/00/0000";
             this.txtData.Name = "txtData";
             this.txtData.Size = new System.Drawing.Size(82, 20);
             this.txtData.TabIndex = 4;
             this.txtData.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtData.ValidatingType = typeof(System.DateTime);
+            // 
+            // lblSaldoConta
+            // 
+            this.lblSaldoConta.AutoSize = true;
+            this.lblSaldoConta.Location = new System.Drawing.Point(423, 124);
+            this.lblSaldoConta.Name = "lblSaldoConta";
+            this.lblSaldoConta.Size = new System.Drawing.Size(83, 13);
+            this.lblSaldoConta.TabIndex = 2;
+            this.lblSaldoConta.Text = "SALDO CONTA";
+            // 
+            // txtSaldoConta
+            // 
+            this.txtSaldoConta.Location = new System.Drawing.Point(512, 120);
+            this.txtSaldoConta.Name = "txtSaldoConta";
+            this.txtSaldoConta.Size = new System.Drawing.Size(110, 20);
+            this.txtSaldoConta.TabIndex = 9;
             // 
             // frmMovimentacaoNova
             // 
@@ -259,9 +277,11 @@
             this.Controls.Add(this.cmbIdClasse);
             this.Controls.Add(this.cmbIdConta);
             this.Controls.Add(this.cmbIdCategoria);
+            this.Controls.Add(this.txtSaldoConta);
             this.Controls.Add(this.txtConta);
             this.Controls.Add(this.txtNomeCategoria);
             this.Controls.Add(this.txtNomeClasse);
+            this.Controls.Add(this.lblSaldoConta);
             this.Controls.Add(this.lblIdClasse);
             this.Controls.Add(this.lblConta);
             this.Controls.Add(this.lblIdConta);
@@ -300,5 +320,7 @@
         private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.MaskedTextBox txtData;
+        private System.Windows.Forms.Label lblSaldoConta;
+        private System.Windows.Forms.TextBox txtSaldoConta;
     }
 }

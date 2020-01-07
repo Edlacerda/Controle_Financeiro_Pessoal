@@ -210,7 +210,7 @@
             // lblData
             // 
             this.lblData.AutoSize = true;
-            this.lblData.Location = new System.Drawing.Point(327, 164);
+            this.lblData.Location = new System.Drawing.Point(330, 164);
             this.lblData.Name = "lblData";
             this.lblData.Size = new System.Drawing.Size(36, 13);
             this.lblData.TabIndex = 7;
@@ -218,9 +218,9 @@
             // 
             // txtData
             // 
-            this.txtData.Location = new System.Drawing.Point(412, 161);
+            this.txtData.Location = new System.Drawing.Point(372, 161);
             this.txtData.Name = "txtData";
-            this.txtData.Size = new System.Drawing.Size(210, 20);
+            this.txtData.Size = new System.Drawing.Size(250, 20);
             this.txtData.TabIndex = 3;
             // 
             // lblFornecedor
