@@ -16,6 +16,9 @@ Classe - Remuneração, Transferência, Investimentos, Rendimentos e Outros (Ent
 
 Conta - Dinheiro
 
+Os arquivos mdf e ldf não commitaram, portanto será necessário reproduir o banco de dados com as querys contidas no arquivo "Query DBFinanceiro" contido na pasta Data.
+A connectionString deverá ser atualizada no construtor da Classe Data, que se encontra na pasta model. 
+
 O programa permitirá que o usuário:
 Inclua/Exclua/Edite Classificações financeiras;
 Inclua/Exclua/Edite Contas financeiras;
